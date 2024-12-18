@@ -1,0 +1,2085 @@
+---
+layout: default
+---
+	
+<script language="Javascript" >
+function download() {
+  var filename = window.document.myform.docname.value;
+  var pom = document.createElement('a');
+	
+  const form = window.document.getElementById('form-id');
+
+  var id_list = ['docname', 'name', 'ex1', 'ex2', 'ex3', 'ex4', 'ex5', 'ex6', 'ex7', 'ex8', 'ex9', 'ex10', 'ex11', 
+		 'ex12', 'ex13', 'ex14', 'ex15', 'ex16', 'ex17', 'ex18', 'ex19', 'ex20', 'ex21', 'ex22', 'ex23', 
+		 'ex24', 'ex25', 'ex26', 'ex27', 'ex28', 'ex29', 'ex30', 'ex31', 'ex32', 'ex33', 'ex34', 'ex35', 
+		 'ex36', 'ex37', 'ex38', 'ex39', 'ex40', 'ex41', 'ex42', 'ex43', 'ex44', 'ex45', 'ex46', 'ex47', 
+		 'ex48', 'ex49', 'ex50', 'ex51', 'ex52', 'ex53', 'ex54', 'ex55', 'ex56', 'ex57', 'ex58', 'ex59', 
+		 'ex60', 'ex61', 'ex62', 'ex63', 'ex64', 'ex65', 'ex66', 'ex67', 'ex68', 'ex69', 'ex70', 'ex71', 
+		 'ex72', 'ex73', 'ex74', 'ex75', 'ex76', 'ex77', 'ex78', 'ex79', 'ex80', 'ex81', 'ex82', 'ex83', 
+		 'ex84', 'ex85', 'ex86', 'ex87', 'ex88', 'ex89', 'ex90', 'ex91', 'ex92', 'ex93', 'ex94', 'ex95', 
+		 'ex96', 'ex97', 'ex98', 'ex99', 'ex100', 'ex101', 'ex102', 'ex103', 'ex104', 'ex105', 'ex106', 
+		 'ex107', 'ex108', 'ex109', 'ex110', 'ex111', 'ex112', 'ex113', 'ex114', 'ex115', 'ex116', 'ex117', 
+		 'ex118', 'ex119', 'ex120', 'ex121', 'ex122', 'ex123', 'ex124', 'ex125', 'ex126', 'ex127', 'ex128', 
+		 'ex129', 'ex130', 'ex131', 'ex132', 'ex133', 'ex134', 'ex135', 'ex136', 'ex137', 'ex138', 'ex139', 'ex140', 'ex141', 'ex142', 'ex143', 'ex144']
+  var arr = [];
+  for (i=0; i<id_list.length; i++){
+
+	arr.push([id_list[i], form[id_list[i]].value])
+  }
+  
+  
+ 
+  pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + arr);
+
+
+  pom.setAttribute('download', filename);
+
+  pom.style.display = 'none';
+  document.body.appendChild(pom);
+
+  pom.click();
+
+  document.body.removeChild(pom);
+}
+</script>
+
+  
+  <h2><strong>Naturalness Evaluation</strong></h2>
+  
+  <body>
+    Below, we provide some examples for speech naturalness evaluation. <br>
+    Listen the sample and rate a score from 1 to 5 based on how natural the speech is.
+    <br>
+  
+  <form id="form-id" name="myform" method="post" >
+    Filename: <input type="text" id="docname" value="Ge_VC_naturalness.txt" /> 
+    <br>
+    Name: <input type="text" id="name" placeholder="Write your name"/>
+
+
+	<h4><strong> 1. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex1.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex1').value=this.value; getElementById('ex1').show()" style="display:inline" name="score1" />
+		2 <input type="radio" value="2" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		3 <input type="radio" value="3" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		4 <input type="radio" value="4" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		5 <input type="radio" value="5" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		<input type="text" id="ex1" />
+	</div>
+	<br>
+	<h4><strong> 2. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex2.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex2').value=this.value; getElementById('ex2').show()" style="display:inline" name="score2" />
+		2 <input type="radio" value="2" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		3 <input type="radio" value="3" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		4 <input type="radio" value="4" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		5 <input type="radio" value="5" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		<input type="text" id="ex2" />
+	</div>
+	<br>
+	<h4><strong> 3. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex3.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex3').value=this.value; getElementById('ex3').show()" style="display:inline" name="score3" />
+		2 <input type="radio" value="2" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		3 <input type="radio" value="3" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		4 <input type="radio" value="4" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		5 <input type="radio" value="5" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		<input type="text" id="ex3" />
+	</div>
+	<br>
+	<h4><strong> 4. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex4.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex4').value=this.value; getElementById('ex4').show()" style="display:inline" name="score4" />
+		2 <input type="radio" value="2" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		3 <input type="radio" value="3" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		4 <input type="radio" value="4" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		5 <input type="radio" value="5" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		<input type="text" id="ex4" />
+	</div>
+	<br>
+	<h4><strong> 5. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex5.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex5').value=this.value; getElementById('ex5').show()" style="display:inline" name="score5" />
+		2 <input type="radio" value="2" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		3 <input type="radio" value="3" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		4 <input type="radio" value="4" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		5 <input type="radio" value="5" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		<input type="text" id="ex5" />
+	</div>
+	<br>
+	<h4><strong> 6. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex6.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex6').value=this.value; getElementById('ex6').show()" style="display:inline" name="score6" />
+		2 <input type="radio" value="2" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		3 <input type="radio" value="3" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		4 <input type="radio" value="4" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		5 <input type="radio" value="5" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		<input type="text" id="ex6" />
+	</div>
+	<br>
+	<h4><strong> 7. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex7.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex7').value=this.value; getElementById('ex7').show()" style="display:inline" name="score7" />
+		2 <input type="radio" value="2" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		3 <input type="radio" value="3" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		4 <input type="radio" value="4" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		5 <input type="radio" value="5" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		<input type="text" id="ex7" />
+	</div>
+	<br>
+	<h4><strong> 8. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex8.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex8').value=this.value; getElementById('ex8').show()" style="display:inline" name="score8" />
+		2 <input type="radio" value="2" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		3 <input type="radio" value="3" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		4 <input type="radio" value="4" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		5 <input type="radio" value="5" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		<input type="text" id="ex8" />
+	</div>
+	<br>
+	<h4><strong> 9. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex9.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex9').value=this.value; getElementById('ex9').show()" style="display:inline" name="score9" />
+		2 <input type="radio" value="2" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		3 <input type="radio" value="3" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		4 <input type="radio" value="4" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		5 <input type="radio" value="5" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		<input type="text" id="ex9" />
+	</div>
+	<br>
+	<h4><strong> 10. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex10.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex10').value=this.value; getElementById('ex10').show()" style="display:inline" name="score10" />
+		2 <input type="radio" value="2" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		3 <input type="radio" value="3" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		4 <input type="radio" value="4" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		5 <input type="radio" value="5" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		<input type="text" id="ex10" />
+	</div>
+	<br>
+	<h4><strong> 11. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex11.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex11').value=this.value; getElementById('ex11').show()" style="display:inline" name="score11" />
+		2 <input type="radio" value="2" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		3 <input type="radio" value="3" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		4 <input type="radio" value="4" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		5 <input type="radio" value="5" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		<input type="text" id="ex11" />
+	</div>
+	<br>
+	<h4><strong> 12. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex12.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex12').value=this.value; getElementById('ex12').show()" style="display:inline" name="score12" />
+		2 <input type="radio" value="2" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		3 <input type="radio" value="3" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		4 <input type="radio" value="4" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		5 <input type="radio" value="5" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		<input type="text" id="ex12" />
+	</div>
+	<br>
+	<h4><strong> 13. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex13.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex13').value=this.value; getElementById('ex13').show()" style="display:inline" name="score13" />
+		2 <input type="radio" value="2" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		3 <input type="radio" value="3" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		4 <input type="radio" value="4" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		5 <input type="radio" value="5" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		<input type="text" id="ex13" />
+	</div>
+	<br>
+	<h4><strong> 14. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex14.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex14').value=this.value; getElementById('ex14').show()" style="display:inline" name="score14" />
+		2 <input type="radio" value="2" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		3 <input type="radio" value="3" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		4 <input type="radio" value="4" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		5 <input type="radio" value="5" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		<input type="text" id="ex14" />
+	</div>
+	<br>
+	<h4><strong> 15. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex15.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex15').value=this.value; getElementById('ex15').show()" style="display:inline" name="score15" />
+		2 <input type="radio" value="2" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		3 <input type="radio" value="3" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		4 <input type="radio" value="4" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		5 <input type="radio" value="5" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		<input type="text" id="ex15" />
+	</div>
+	<br>
+	<h4><strong> 16. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex16.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex16').value=this.value; getElementById('ex16').show()" style="display:inline" name="score16" />
+		2 <input type="radio" value="2" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		3 <input type="radio" value="3" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		4 <input type="radio" value="4" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		5 <input type="radio" value="5" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		<input type="text" id="ex16" />
+	</div>
+	<br>
+	<h4><strong> 17. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex17.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex17').value=this.value; getElementById('ex17').show()" style="display:inline" name="score17" />
+		2 <input type="radio" value="2" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		3 <input type="radio" value="3" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		4 <input type="radio" value="4" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		5 <input type="radio" value="5" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		<input type="text" id="ex17" />
+	</div>
+	<br>
+	<h4><strong> 18. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex18.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex18').value=this.value; getElementById('ex18').show()" style="display:inline" name="score18" />
+		2 <input type="radio" value="2" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		3 <input type="radio" value="3" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		4 <input type="radio" value="4" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		5 <input type="radio" value="5" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		<input type="text" id="ex18" />
+	</div>
+	<br>
+	<h4><strong> 19. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex19.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex19').value=this.value; getElementById('ex19').show()" style="display:inline" name="score19" />
+		2 <input type="radio" value="2" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		3 <input type="radio" value="3" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		4 <input type="radio" value="4" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		5 <input type="radio" value="5" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		<input type="text" id="ex19" />
+	</div>
+	<br>
+	<h4><strong> 20. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex20.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex20').value=this.value; getElementById('ex20').show()" style="display:inline" name="score20" />
+		2 <input type="radio" value="2" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		3 <input type="radio" value="3" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		4 <input type="radio" value="4" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		5 <input type="radio" value="5" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		<input type="text" id="ex20" />
+	</div>
+	<br>
+	<h4><strong> 21. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex21.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex21').value=this.value; getElementById('ex21').show()" style="display:inline" name="score21" />
+		2 <input type="radio" value="2" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		3 <input type="radio" value="3" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		4 <input type="radio" value="4" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		5 <input type="radio" value="5" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		<input type="text" id="ex21" />
+	</div>
+	<br>
+	<h4><strong> 22. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex22.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex22').value=this.value; getElementById('ex22').show()" style="display:inline" name="score22" />
+		2 <input type="radio" value="2" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		3 <input type="radio" value="3" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		4 <input type="radio" value="4" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		5 <input type="radio" value="5" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		<input type="text" id="ex22" />
+	</div>
+	<br>
+	<h4><strong> 23. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex23.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex23').value=this.value; getElementById('ex23').show()" style="display:inline" name="score23" />
+		2 <input type="radio" value="2" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		3 <input type="radio" value="3" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		4 <input type="radio" value="4" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		5 <input type="radio" value="5" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		<input type="text" id="ex23" />
+	</div>
+	<br>
+	<h4><strong> 24. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex24.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex24').value=this.value; getElementById('ex24').show()" style="display:inline" name="score24" />
+		2 <input type="radio" value="2" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		3 <input type="radio" value="3" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		4 <input type="radio" value="4" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		5 <input type="radio" value="5" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		<input type="text" id="ex24" />
+	</div>
+	<br>
+	<h4><strong> 25. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex25.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex25').value=this.value; getElementById('ex25').show()" style="display:inline" name="score25" />
+		2 <input type="radio" value="2" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		3 <input type="radio" value="3" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		4 <input type="radio" value="4" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		5 <input type="radio" value="5" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		<input type="text" id="ex25" />
+	</div>
+	<br>
+	<h4><strong> 26. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex26.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex26').value=this.value; getElementById('ex26').show()" style="display:inline" name="score26" />
+		2 <input type="radio" value="2" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		3 <input type="radio" value="3" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		4 <input type="radio" value="4" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		5 <input type="radio" value="5" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		<input type="text" id="ex26" />
+	</div>
+	<br>
+	<h4><strong> 27. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex27.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex27').value=this.value; getElementById('ex27').show()" style="display:inline" name="score27" />
+		2 <input type="radio" value="2" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		3 <input type="radio" value="3" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		4 <input type="radio" value="4" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		5 <input type="radio" value="5" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		<input type="text" id="ex27" />
+	</div>
+	<br>
+	<h4><strong> 28. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex28.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex28').value=this.value; getElementById('ex28').show()" style="display:inline" name="score28" />
+		2 <input type="radio" value="2" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		3 <input type="radio" value="3" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		4 <input type="radio" value="4" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		5 <input type="radio" value="5" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		<input type="text" id="ex28" />
+	</div>
+	<br>
+	<h4><strong> 29. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex29.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex29').value=this.value; getElementById('ex29').show()" style="display:inline" name="score29" />
+		2 <input type="radio" value="2" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		3 <input type="radio" value="3" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		4 <input type="radio" value="4" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		5 <input type="radio" value="5" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		<input type="text" id="ex29" />
+	</div>
+	<br>
+	<h4><strong> 30. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex30.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex30').value=this.value; getElementById('ex30').show()" style="display:inline" name="score30" />
+		2 <input type="radio" value="2" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		3 <input type="radio" value="3" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		4 <input type="radio" value="4" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		5 <input type="radio" value="5" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		<input type="text" id="ex30" />
+	</div>
+	<br>
+	<h4><strong> 31. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex31.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex31').value=this.value; getElementById('ex31').show()" style="display:inline" name="score31" />
+		2 <input type="radio" value="2" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		3 <input type="radio" value="3" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		4 <input type="radio" value="4" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		5 <input type="radio" value="5" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		<input type="text" id="ex31" />
+	</div>
+	<br>
+	<h4><strong> 32. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex32.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex32').value=this.value; getElementById('ex32').show()" style="display:inline" name="score32" />
+		2 <input type="radio" value="2" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		3 <input type="radio" value="3" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		4 <input type="radio" value="4" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		5 <input type="radio" value="5" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		<input type="text" id="ex32" />
+	</div>
+	<br>
+	<h4><strong> 33. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex33.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex33').value=this.value; getElementById('ex33').show()" style="display:inline" name="score33" />
+		2 <input type="radio" value="2" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		3 <input type="radio" value="3" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		4 <input type="radio" value="4" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		5 <input type="radio" value="5" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		<input type="text" id="ex33" />
+	</div>
+	<br>
+	<h4><strong> 34. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex34.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex34').value=this.value; getElementById('ex34').show()" style="display:inline" name="score34" />
+		2 <input type="radio" value="2" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		3 <input type="radio" value="3" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		4 <input type="radio" value="4" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		5 <input type="radio" value="5" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		<input type="text" id="ex34" />
+	</div>
+	<br>
+	<h4><strong> 35. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex35.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex35').value=this.value; getElementById('ex35').show()" style="display:inline" name="score35" />
+		2 <input type="radio" value="2" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		3 <input type="radio" value="3" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		4 <input type="radio" value="4" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		5 <input type="radio" value="5" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		<input type="text" id="ex35" />
+	</div>
+	<br>
+	<h4><strong> 36. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex36.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex36').value=this.value; getElementById('ex36').show()" style="display:inline" name="score36" />
+		2 <input type="radio" value="2" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		3 <input type="radio" value="3" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		4 <input type="radio" value="4" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		5 <input type="radio" value="5" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		<input type="text" id="ex36" />
+	</div>
+	<br>
+	<h4><strong> 37. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex37.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex37').value=this.value; getElementById('ex37').show()" style="display:inline" name="score37" />
+		2 <input type="radio" value="2" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		3 <input type="radio" value="3" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		4 <input type="radio" value="4" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		5 <input type="radio" value="5" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		<input type="text" id="ex37" />
+	</div>
+	<br>
+	<h4><strong> 38. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex38.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex38').value=this.value; getElementById('ex38').show()" style="display:inline" name="score38" />
+		2 <input type="radio" value="2" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		3 <input type="radio" value="3" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		4 <input type="radio" value="4" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		5 <input type="radio" value="5" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		<input type="text" id="ex38" />
+	</div>
+	<br>
+	<h4><strong> 39. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex39.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex39').value=this.value; getElementById('ex39').show()" style="display:inline" name="score39" />
+		2 <input type="radio" value="2" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		3 <input type="radio" value="3" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		4 <input type="radio" value="4" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		5 <input type="radio" value="5" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		<input type="text" id="ex39" />
+	</div>
+	<br>
+	<h4><strong> 40. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex40.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex40').value=this.value; getElementById('ex40').show()" style="display:inline" name="score40" />
+		2 <input type="radio" value="2" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		3 <input type="radio" value="3" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		4 <input type="radio" value="4" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		5 <input type="radio" value="5" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		<input type="text" id="ex40" />
+	</div>
+	<br>
+	<h4><strong> 41. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex41.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex41').value=this.value; getElementById('ex41').show()" style="display:inline" name="score41" />
+		2 <input type="radio" value="2" onclick="getElementById('ex41').value=this.value;" style="display:inline" name="score41" />
+		3 <input type="radio" value="3" onclick="getElementById('ex41').value=this.value;" style="display:inline" name="score41" />
+		4 <input type="radio" value="4" onclick="getElementById('ex41').value=this.value;" style="display:inline" name="score41" />
+		5 <input type="radio" value="5" onclick="getElementById('ex41').value=this.value;" style="display:inline" name="score41" />
+		<input type="text" id="ex41" />
+	</div>
+	<br>
+	<h4><strong> 42. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex42.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex42').value=this.value; getElementById('ex42').show()" style="display:inline" name="score42" />
+		2 <input type="radio" value="2" onclick="getElementById('ex42').value=this.value;" style="display:inline" name="score42" />
+		3 <input type="radio" value="3" onclick="getElementById('ex42').value=this.value;" style="display:inline" name="score42" />
+		4 <input type="radio" value="4" onclick="getElementById('ex42').value=this.value;" style="display:inline" name="score42" />
+		5 <input type="radio" value="5" onclick="getElementById('ex42').value=this.value;" style="display:inline" name="score42" />
+		<input type="text" id="ex42" />
+	</div>
+	<br>
+	<h4><strong> 43. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex43.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex43').value=this.value; getElementById('ex43').show()" style="display:inline" name="score43" />
+		2 <input type="radio" value="2" onclick="getElementById('ex43').value=this.value;" style="display:inline" name="score43" />
+		3 <input type="radio" value="3" onclick="getElementById('ex43').value=this.value;" style="display:inline" name="score43" />
+		4 <input type="radio" value="4" onclick="getElementById('ex43').value=this.value;" style="display:inline" name="score43" />
+		5 <input type="radio" value="5" onclick="getElementById('ex43').value=this.value;" style="display:inline" name="score43" />
+		<input type="text" id="ex43" />
+	</div>
+	<br>
+	<h4><strong> 44. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex44.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex44').value=this.value; getElementById('ex44').show()" style="display:inline" name="score44" />
+		2 <input type="radio" value="2" onclick="getElementById('ex44').value=this.value;" style="display:inline" name="score44" />
+		3 <input type="radio" value="3" onclick="getElementById('ex44').value=this.value;" style="display:inline" name="score44" />
+		4 <input type="radio" value="4" onclick="getElementById('ex44').value=this.value;" style="display:inline" name="score44" />
+		5 <input type="radio" value="5" onclick="getElementById('ex44').value=this.value;" style="display:inline" name="score44" />
+		<input type="text" id="ex44" />
+	</div>
+	<br>
+	<h4><strong> 45. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex45.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex45').value=this.value; getElementById('ex45').show()" style="display:inline" name="score45" />
+		2 <input type="radio" value="2" onclick="getElementById('ex45').value=this.value;" style="display:inline" name="score45" />
+		3 <input type="radio" value="3" onclick="getElementById('ex45').value=this.value;" style="display:inline" name="score45" />
+		4 <input type="radio" value="4" onclick="getElementById('ex45').value=this.value;" style="display:inline" name="score45" />
+		5 <input type="radio" value="5" onclick="getElementById('ex45').value=this.value;" style="display:inline" name="score45" />
+		<input type="text" id="ex45" />
+	</div>
+	<br>
+	<h4><strong> 46. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex46.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex46').value=this.value; getElementById('ex46').show()" style="display:inline" name="score46" />
+		2 <input type="radio" value="2" onclick="getElementById('ex46').value=this.value;" style="display:inline" name="score46" />
+		3 <input type="radio" value="3" onclick="getElementById('ex46').value=this.value;" style="display:inline" name="score46" />
+		4 <input type="radio" value="4" onclick="getElementById('ex46').value=this.value;" style="display:inline" name="score46" />
+		5 <input type="radio" value="5" onclick="getElementById('ex46').value=this.value;" style="display:inline" name="score46" />
+		<input type="text" id="ex46" />
+	</div>
+	<br>
+	<h4><strong> 47. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex47.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex47').value=this.value; getElementById('ex47').show()" style="display:inline" name="score47" />
+		2 <input type="radio" value="2" onclick="getElementById('ex47').value=this.value;" style="display:inline" name="score47" />
+		3 <input type="radio" value="3" onclick="getElementById('ex47').value=this.value;" style="display:inline" name="score47" />
+		4 <input type="radio" value="4" onclick="getElementById('ex47').value=this.value;" style="display:inline" name="score47" />
+		5 <input type="radio" value="5" onclick="getElementById('ex47').value=this.value;" style="display:inline" name="score47" />
+		<input type="text" id="ex47" />
+	</div>
+	<br>
+	<h4><strong> 48. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex48.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex48').value=this.value; getElementById('ex48').show()" style="display:inline" name="score48" />
+		2 <input type="radio" value="2" onclick="getElementById('ex48').value=this.value;" style="display:inline" name="score48" />
+		3 <input type="radio" value="3" onclick="getElementById('ex48').value=this.value;" style="display:inline" name="score48" />
+		4 <input type="radio" value="4" onclick="getElementById('ex48').value=this.value;" style="display:inline" name="score48" />
+		5 <input type="radio" value="5" onclick="getElementById('ex48').value=this.value;" style="display:inline" name="score48" />
+		<input type="text" id="ex48" />
+	</div>
+	<br>
+	<h4><strong> 49. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex49.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex49').value=this.value; getElementById('ex49').show()" style="display:inline" name="score49" />
+		2 <input type="radio" value="2" onclick="getElementById('ex49').value=this.value;" style="display:inline" name="score49" />
+		3 <input type="radio" value="3" onclick="getElementById('ex49').value=this.value;" style="display:inline" name="score49" />
+		4 <input type="radio" value="4" onclick="getElementById('ex49').value=this.value;" style="display:inline" name="score49" />
+		5 <input type="radio" value="5" onclick="getElementById('ex49').value=this.value;" style="display:inline" name="score49" />
+		<input type="text" id="ex49" />
+	</div>
+	<br>
+	<h4><strong> 50. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex50.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex50').value=this.value; getElementById('ex50').show()" style="display:inline" name="score50" />
+		2 <input type="radio" value="2" onclick="getElementById('ex50').value=this.value;" style="display:inline" name="score50" />
+		3 <input type="radio" value="3" onclick="getElementById('ex50').value=this.value;" style="display:inline" name="score50" />
+		4 <input type="radio" value="4" onclick="getElementById('ex50').value=this.value;" style="display:inline" name="score50" />
+		5 <input type="radio" value="5" onclick="getElementById('ex50').value=this.value;" style="display:inline" name="score50" />
+		<input type="text" id="ex50" />
+	</div>
+	<br>
+	<h4><strong> 51. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex51.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex51').value=this.value; getElementById('ex51').show()" style="display:inline" name="score51" />
+		2 <input type="radio" value="2" onclick="getElementById('ex51').value=this.value;" style="display:inline" name="score51" />
+		3 <input type="radio" value="3" onclick="getElementById('ex51').value=this.value;" style="display:inline" name="score51" />
+		4 <input type="radio" value="4" onclick="getElementById('ex51').value=this.value;" style="display:inline" name="score51" />
+		5 <input type="radio" value="5" onclick="getElementById('ex51').value=this.value;" style="display:inline" name="score51" />
+		<input type="text" id="ex51" />
+	</div>
+	<br>
+	<h4><strong> 52. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex52.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex52').value=this.value; getElementById('ex52').show()" style="display:inline" name="score52" />
+		2 <input type="radio" value="2" onclick="getElementById('ex52').value=this.value;" style="display:inline" name="score52" />
+		3 <input type="radio" value="3" onclick="getElementById('ex52').value=this.value;" style="display:inline" name="score52" />
+		4 <input type="radio" value="4" onclick="getElementById('ex52').value=this.value;" style="display:inline" name="score52" />
+		5 <input type="radio" value="5" onclick="getElementById('ex52').value=this.value;" style="display:inline" name="score52" />
+		<input type="text" id="ex52" />
+	</div>
+	<br>
+	<h4><strong> 53. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex53.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex53').value=this.value; getElementById('ex53').show()" style="display:inline" name="score53" />
+		2 <input type="radio" value="2" onclick="getElementById('ex53').value=this.value;" style="display:inline" name="score53" />
+		3 <input type="radio" value="3" onclick="getElementById('ex53').value=this.value;" style="display:inline" name="score53" />
+		4 <input type="radio" value="4" onclick="getElementById('ex53').value=this.value;" style="display:inline" name="score53" />
+		5 <input type="radio" value="5" onclick="getElementById('ex53').value=this.value;" style="display:inline" name="score53" />
+		<input type="text" id="ex53" />
+	</div>
+	<br>
+	<h4><strong> 54. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex54.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex54').value=this.value; getElementById('ex54').show()" style="display:inline" name="score54" />
+		2 <input type="radio" value="2" onclick="getElementById('ex54').value=this.value;" style="display:inline" name="score54" />
+		3 <input type="radio" value="3" onclick="getElementById('ex54').value=this.value;" style="display:inline" name="score54" />
+		4 <input type="radio" value="4" onclick="getElementById('ex54').value=this.value;" style="display:inline" name="score54" />
+		5 <input type="radio" value="5" onclick="getElementById('ex54').value=this.value;" style="display:inline" name="score54" />
+		<input type="text" id="ex54" />
+	</div>
+	<br>
+	<h4><strong> 55. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex55.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex55').value=this.value; getElementById('ex55').show()" style="display:inline" name="score55" />
+		2 <input type="radio" value="2" onclick="getElementById('ex55').value=this.value;" style="display:inline" name="score55" />
+		3 <input type="radio" value="3" onclick="getElementById('ex55').value=this.value;" style="display:inline" name="score55" />
+		4 <input type="radio" value="4" onclick="getElementById('ex55').value=this.value;" style="display:inline" name="score55" />
+		5 <input type="radio" value="5" onclick="getElementById('ex55').value=this.value;" style="display:inline" name="score55" />
+		<input type="text" id="ex55" />
+	</div>
+	<br>
+	<h4><strong> 56. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex56.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex56').value=this.value; getElementById('ex56').show()" style="display:inline" name="score56" />
+		2 <input type="radio" value="2" onclick="getElementById('ex56').value=this.value;" style="display:inline" name="score56" />
+		3 <input type="radio" value="3" onclick="getElementById('ex56').value=this.value;" style="display:inline" name="score56" />
+		4 <input type="radio" value="4" onclick="getElementById('ex56').value=this.value;" style="display:inline" name="score56" />
+		5 <input type="radio" value="5" onclick="getElementById('ex56').value=this.value;" style="display:inline" name="score56" />
+		<input type="text" id="ex56" />
+	</div>
+	<br>
+	<h4><strong> 57. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex57.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex57').value=this.value; getElementById('ex57').show()" style="display:inline" name="score57" />
+		2 <input type="radio" value="2" onclick="getElementById('ex57').value=this.value;" style="display:inline" name="score57" />
+		3 <input type="radio" value="3" onclick="getElementById('ex57').value=this.value;" style="display:inline" name="score57" />
+		4 <input type="radio" value="4" onclick="getElementById('ex57').value=this.value;" style="display:inline" name="score57" />
+		5 <input type="radio" value="5" onclick="getElementById('ex57').value=this.value;" style="display:inline" name="score57" />
+		<input type="text" id="ex57" />
+	</div>
+	<br>
+	<h4><strong> 58. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex58.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex58').value=this.value; getElementById('ex58').show()" style="display:inline" name="score58" />
+		2 <input type="radio" value="2" onclick="getElementById('ex58').value=this.value;" style="display:inline" name="score58" />
+		3 <input type="radio" value="3" onclick="getElementById('ex58').value=this.value;" style="display:inline" name="score58" />
+		4 <input type="radio" value="4" onclick="getElementById('ex58').value=this.value;" style="display:inline" name="score58" />
+		5 <input type="radio" value="5" onclick="getElementById('ex58').value=this.value;" style="display:inline" name="score58" />
+		<input type="text" id="ex58" />
+	</div>
+	<br>
+	<h4><strong> 59. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex59.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex59').value=this.value; getElementById('ex59').show()" style="display:inline" name="score59" />
+		2 <input type="radio" value="2" onclick="getElementById('ex59').value=this.value;" style="display:inline" name="score59" />
+		3 <input type="radio" value="3" onclick="getElementById('ex59').value=this.value;" style="display:inline" name="score59" />
+		4 <input type="radio" value="4" onclick="getElementById('ex59').value=this.value;" style="display:inline" name="score59" />
+		5 <input type="radio" value="5" onclick="getElementById('ex59').value=this.value;" style="display:inline" name="score59" />
+		<input type="text" id="ex59" />
+	</div>
+	<br>
+	<h4><strong> 60. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex60.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex60').value=this.value; getElementById('ex60').show()" style="display:inline" name="score60" />
+		2 <input type="radio" value="2" onclick="getElementById('ex60').value=this.value;" style="display:inline" name="score60" />
+		3 <input type="radio" value="3" onclick="getElementById('ex60').value=this.value;" style="display:inline" name="score60" />
+		4 <input type="radio" value="4" onclick="getElementById('ex60').value=this.value;" style="display:inline" name="score60" />
+		5 <input type="radio" value="5" onclick="getElementById('ex60').value=this.value;" style="display:inline" name="score60" />
+		<input type="text" id="ex60" />
+	</div>
+	<br>
+	<h4><strong> 61. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex61.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex61').value=this.value; getElementById('ex61').show()" style="display:inline" name="score61" />
+		2 <input type="radio" value="2" onclick="getElementById('ex61').value=this.value;" style="display:inline" name="score61" />
+		3 <input type="radio" value="3" onclick="getElementById('ex61').value=this.value;" style="display:inline" name="score61" />
+		4 <input type="radio" value="4" onclick="getElementById('ex61').value=this.value;" style="display:inline" name="score61" />
+		5 <input type="radio" value="5" onclick="getElementById('ex61').value=this.value;" style="display:inline" name="score61" />
+		<input type="text" id="ex61" />
+	</div>
+	<br>
+	<h4><strong> 62. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex62.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex62').value=this.value; getElementById('ex62').show()" style="display:inline" name="score62" />
+		2 <input type="radio" value="2" onclick="getElementById('ex62').value=this.value;" style="display:inline" name="score62" />
+		3 <input type="radio" value="3" onclick="getElementById('ex62').value=this.value;" style="display:inline" name="score62" />
+		4 <input type="radio" value="4" onclick="getElementById('ex62').value=this.value;" style="display:inline" name="score62" />
+		5 <input type="radio" value="5" onclick="getElementById('ex62').value=this.value;" style="display:inline" name="score62" />
+		<input type="text" id="ex62" />
+	</div>
+	<br>
+	<h4><strong> 63. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex63.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex63').value=this.value; getElementById('ex63').show()" style="display:inline" name="score63" />
+		2 <input type="radio" value="2" onclick="getElementById('ex63').value=this.value;" style="display:inline" name="score63" />
+		3 <input type="radio" value="3" onclick="getElementById('ex63').value=this.value;" style="display:inline" name="score63" />
+		4 <input type="radio" value="4" onclick="getElementById('ex63').value=this.value;" style="display:inline" name="score63" />
+		5 <input type="radio" value="5" onclick="getElementById('ex63').value=this.value;" style="display:inline" name="score63" />
+		<input type="text" id="ex63" />
+	</div>
+	<br>
+	<h4><strong> 64. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex64.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex64').value=this.value; getElementById('ex64').show()" style="display:inline" name="score64" />
+		2 <input type="radio" value="2" onclick="getElementById('ex64').value=this.value;" style="display:inline" name="score64" />
+		3 <input type="radio" value="3" onclick="getElementById('ex64').value=this.value;" style="display:inline" name="score64" />
+		4 <input type="radio" value="4" onclick="getElementById('ex64').value=this.value;" style="display:inline" name="score64" />
+		5 <input type="radio" value="5" onclick="getElementById('ex64').value=this.value;" style="display:inline" name="score64" />
+		<input type="text" id="ex64" />
+	</div>
+	<br>
+	<h4><strong> 65. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex65.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex65').value=this.value; getElementById('ex65').show()" style="display:inline" name="score65" />
+		2 <input type="radio" value="2" onclick="getElementById('ex65').value=this.value;" style="display:inline" name="score65" />
+		3 <input type="radio" value="3" onclick="getElementById('ex65').value=this.value;" style="display:inline" name="score65" />
+		4 <input type="radio" value="4" onclick="getElementById('ex65').value=this.value;" style="display:inline" name="score65" />
+		5 <input type="radio" value="5" onclick="getElementById('ex65').value=this.value;" style="display:inline" name="score65" />
+		<input type="text" id="ex65" />
+	</div>
+	<br>
+	<h4><strong> 66. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex66.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex66').value=this.value; getElementById('ex66').show()" style="display:inline" name="score66" />
+		2 <input type="radio" value="2" onclick="getElementById('ex66').value=this.value;" style="display:inline" name="score66" />
+		3 <input type="radio" value="3" onclick="getElementById('ex66').value=this.value;" style="display:inline" name="score66" />
+		4 <input type="radio" value="4" onclick="getElementById('ex66').value=this.value;" style="display:inline" name="score66" />
+		5 <input type="radio" value="5" onclick="getElementById('ex66').value=this.value;" style="display:inline" name="score66" />
+		<input type="text" id="ex66" />
+	</div>
+	<br>
+	<h4><strong> 67. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex67.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex67').value=this.value; getElementById('ex67').show()" style="display:inline" name="score67" />
+		2 <input type="radio" value="2" onclick="getElementById('ex67').value=this.value;" style="display:inline" name="score67" />
+		3 <input type="radio" value="3" onclick="getElementById('ex67').value=this.value;" style="display:inline" name="score67" />
+		4 <input type="radio" value="4" onclick="getElementById('ex67').value=this.value;" style="display:inline" name="score67" />
+		5 <input type="radio" value="5" onclick="getElementById('ex67').value=this.value;" style="display:inline" name="score67" />
+		<input type="text" id="ex67" />
+	</div>
+	<br>
+	<h4><strong> 68. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex68.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex68').value=this.value; getElementById('ex68').show()" style="display:inline" name="score68" />
+		2 <input type="radio" value="2" onclick="getElementById('ex68').value=this.value;" style="display:inline" name="score68" />
+		3 <input type="radio" value="3" onclick="getElementById('ex68').value=this.value;" style="display:inline" name="score68" />
+		4 <input type="radio" value="4" onclick="getElementById('ex68').value=this.value;" style="display:inline" name="score68" />
+		5 <input type="radio" value="5" onclick="getElementById('ex68').value=this.value;" style="display:inline" name="score68" />
+		<input type="text" id="ex68" />
+	</div>
+	<br>
+	<h4><strong> 69. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex69.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex69').value=this.value; getElementById('ex69').show()" style="display:inline" name="score69" />
+		2 <input type="radio" value="2" onclick="getElementById('ex69').value=this.value;" style="display:inline" name="score69" />
+		3 <input type="radio" value="3" onclick="getElementById('ex69').value=this.value;" style="display:inline" name="score69" />
+		4 <input type="radio" value="4" onclick="getElementById('ex69').value=this.value;" style="display:inline" name="score69" />
+		5 <input type="radio" value="5" onclick="getElementById('ex69').value=this.value;" style="display:inline" name="score69" />
+		<input type="text" id="ex69" />
+	</div>
+	<br>
+	<h4><strong> 70. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex70.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex70').value=this.value; getElementById('ex70').show()" style="display:inline" name="score70" />
+		2 <input type="radio" value="2" onclick="getElementById('ex70').value=this.value;" style="display:inline" name="score70" />
+		3 <input type="radio" value="3" onclick="getElementById('ex70').value=this.value;" style="display:inline" name="score70" />
+		4 <input type="radio" value="4" onclick="getElementById('ex70').value=this.value;" style="display:inline" name="score70" />
+		5 <input type="radio" value="5" onclick="getElementById('ex70').value=this.value;" style="display:inline" name="score70" />
+		<input type="text" id="ex70" />
+	</div>
+	<br>
+	<h4><strong> 71. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex71.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex71').value=this.value; getElementById('ex71').show()" style="display:inline" name="score71" />
+		2 <input type="radio" value="2" onclick="getElementById('ex71').value=this.value;" style="display:inline" name="score71" />
+		3 <input type="radio" value="3" onclick="getElementById('ex71').value=this.value;" style="display:inline" name="score71" />
+		4 <input type="radio" value="4" onclick="getElementById('ex71').value=this.value;" style="display:inline" name="score71" />
+		5 <input type="radio" value="5" onclick="getElementById('ex71').value=this.value;" style="display:inline" name="score71" />
+		<input type="text" id="ex71" />
+	</div>
+	<br>
+	<h4><strong> 72. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex72.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex72').value=this.value; getElementById('ex72').show()" style="display:inline" name="score72" />
+		2 <input type="radio" value="2" onclick="getElementById('ex72').value=this.value;" style="display:inline" name="score72" />
+		3 <input type="radio" value="3" onclick="getElementById('ex72').value=this.value;" style="display:inline" name="score72" />
+		4 <input type="radio" value="4" onclick="getElementById('ex72').value=this.value;" style="display:inline" name="score72" />
+		5 <input type="radio" value="5" onclick="getElementById('ex72').value=this.value;" style="display:inline" name="score72" />
+		<input type="text" id="ex72" />
+	</div>
+	<br>
+	<h4><strong> 73. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex73.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex73').value=this.value; getElementById('ex73').show()" style="display:inline" name="score73" />
+		2 <input type="radio" value="2" onclick="getElementById('ex73').value=this.value;" style="display:inline" name="score73" />
+		3 <input type="radio" value="3" onclick="getElementById('ex73').value=this.value;" style="display:inline" name="score73" />
+		4 <input type="radio" value="4" onclick="getElementById('ex73').value=this.value;" style="display:inline" name="score73" />
+		5 <input type="radio" value="5" onclick="getElementById('ex73').value=this.value;" style="display:inline" name="score73" />
+		<input type="text" id="ex73" />
+	</div>
+	<br>
+	<h4><strong> 74. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex74.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex74').value=this.value; getElementById('ex74').show()" style="display:inline" name="score74" />
+		2 <input type="radio" value="2" onclick="getElementById('ex74').value=this.value;" style="display:inline" name="score74" />
+		3 <input type="radio" value="3" onclick="getElementById('ex74').value=this.value;" style="display:inline" name="score74" />
+		4 <input type="radio" value="4" onclick="getElementById('ex74').value=this.value;" style="display:inline" name="score74" />
+		5 <input type="radio" value="5" onclick="getElementById('ex74').value=this.value;" style="display:inline" name="score74" />
+		<input type="text" id="ex74" />
+	</div>
+	<br>
+	<h4><strong> 75. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex75.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex75').value=this.value; getElementById('ex75').show()" style="display:inline" name="score75" />
+		2 <input type="radio" value="2" onclick="getElementById('ex75').value=this.value;" style="display:inline" name="score75" />
+		3 <input type="radio" value="3" onclick="getElementById('ex75').value=this.value;" style="display:inline" name="score75" />
+		4 <input type="radio" value="4" onclick="getElementById('ex75').value=this.value;" style="display:inline" name="score75" />
+		5 <input type="radio" value="5" onclick="getElementById('ex75').value=this.value;" style="display:inline" name="score75" />
+		<input type="text" id="ex75" />
+	</div>
+	<br>
+	<h4><strong> 76. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex76.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex76').value=this.value; getElementById('ex76').show()" style="display:inline" name="score76" />
+		2 <input type="radio" value="2" onclick="getElementById('ex76').value=this.value;" style="display:inline" name="score76" />
+		3 <input type="radio" value="3" onclick="getElementById('ex76').value=this.value;" style="display:inline" name="score76" />
+		4 <input type="radio" value="4" onclick="getElementById('ex76').value=this.value;" style="display:inline" name="score76" />
+		5 <input type="radio" value="5" onclick="getElementById('ex76').value=this.value;" style="display:inline" name="score76" />
+		<input type="text" id="ex76" />
+	</div>
+	<br>
+	<h4><strong> 77. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex77.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex77').value=this.value; getElementById('ex77').show()" style="display:inline" name="score77" />
+		2 <input type="radio" value="2" onclick="getElementById('ex77').value=this.value;" style="display:inline" name="score77" />
+		3 <input type="radio" value="3" onclick="getElementById('ex77').value=this.value;" style="display:inline" name="score77" />
+		4 <input type="radio" value="4" onclick="getElementById('ex77').value=this.value;" style="display:inline" name="score77" />
+		5 <input type="radio" value="5" onclick="getElementById('ex77').value=this.value;" style="display:inline" name="score77" />
+		<input type="text" id="ex77" />
+	</div>
+	<br>
+	<h4><strong> 78. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex78.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex78').value=this.value; getElementById('ex78').show()" style="display:inline" name="score78" />
+		2 <input type="radio" value="2" onclick="getElementById('ex78').value=this.value;" style="display:inline" name="score78" />
+		3 <input type="radio" value="3" onclick="getElementById('ex78').value=this.value;" style="display:inline" name="score78" />
+		4 <input type="radio" value="4" onclick="getElementById('ex78').value=this.value;" style="display:inline" name="score78" />
+		5 <input type="radio" value="5" onclick="getElementById('ex78').value=this.value;" style="display:inline" name="score78" />
+		<input type="text" id="ex78" />
+	</div>
+	<br>
+	<h4><strong> 79. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex79.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex79').value=this.value; getElementById('ex79').show()" style="display:inline" name="score79" />
+		2 <input type="radio" value="2" onclick="getElementById('ex79').value=this.value;" style="display:inline" name="score79" />
+		3 <input type="radio" value="3" onclick="getElementById('ex79').value=this.value;" style="display:inline" name="score79" />
+		4 <input type="radio" value="4" onclick="getElementById('ex79').value=this.value;" style="display:inline" name="score79" />
+		5 <input type="radio" value="5" onclick="getElementById('ex79').value=this.value;" style="display:inline" name="score79" />
+		<input type="text" id="ex79" />
+	</div>
+	<br>
+	<h4><strong> 80. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex80.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex80').value=this.value; getElementById('ex80').show()" style="display:inline" name="score80" />
+		2 <input type="radio" value="2" onclick="getElementById('ex80').value=this.value;" style="display:inline" name="score80" />
+		3 <input type="radio" value="3" onclick="getElementById('ex80').value=this.value;" style="display:inline" name="score80" />
+		4 <input type="radio" value="4" onclick="getElementById('ex80').value=this.value;" style="display:inline" name="score80" />
+		5 <input type="radio" value="5" onclick="getElementById('ex80').value=this.value;" style="display:inline" name="score80" />
+		<input type="text" id="ex80" />
+	</div>
+	<br>
+	<h4><strong> 81. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex81.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex81').value=this.value; getElementById('ex81').show()" style="display:inline" name="score81" />
+		2 <input type="radio" value="2" onclick="getElementById('ex81').value=this.value;" style="display:inline" name="score81" />
+		3 <input type="radio" value="3" onclick="getElementById('ex81').value=this.value;" style="display:inline" name="score81" />
+		4 <input type="radio" value="4" onclick="getElementById('ex81').value=this.value;" style="display:inline" name="score81" />
+		5 <input type="radio" value="5" onclick="getElementById('ex81').value=this.value;" style="display:inline" name="score81" />
+		<input type="text" id="ex81" />
+	</div>
+	<br>
+	<h4><strong> 82. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex82.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex82').value=this.value; getElementById('ex82').show()" style="display:inline" name="score82" />
+		2 <input type="radio" value="2" onclick="getElementById('ex82').value=this.value;" style="display:inline" name="score82" />
+		3 <input type="radio" value="3" onclick="getElementById('ex82').value=this.value;" style="display:inline" name="score82" />
+		4 <input type="radio" value="4" onclick="getElementById('ex82').value=this.value;" style="display:inline" name="score82" />
+		5 <input type="radio" value="5" onclick="getElementById('ex82').value=this.value;" style="display:inline" name="score82" />
+		<input type="text" id="ex82" />
+	</div>
+	<br>
+	<h4><strong> 83. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex83.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex83').value=this.value; getElementById('ex83').show()" style="display:inline" name="score83" />
+		2 <input type="radio" value="2" onclick="getElementById('ex83').value=this.value;" style="display:inline" name="score83" />
+		3 <input type="radio" value="3" onclick="getElementById('ex83').value=this.value;" style="display:inline" name="score83" />
+		4 <input type="radio" value="4" onclick="getElementById('ex83').value=this.value;" style="display:inline" name="score83" />
+		5 <input type="radio" value="5" onclick="getElementById('ex83').value=this.value;" style="display:inline" name="score83" />
+		<input type="text" id="ex83" />
+	</div>
+	<br>
+	<h4><strong> 84. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex84.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex84').value=this.value; getElementById('ex84').show()" style="display:inline" name="score84" />
+		2 <input type="radio" value="2" onclick="getElementById('ex84').value=this.value;" style="display:inline" name="score84" />
+		3 <input type="radio" value="3" onclick="getElementById('ex84').value=this.value;" style="display:inline" name="score84" />
+		4 <input type="radio" value="4" onclick="getElementById('ex84').value=this.value;" style="display:inline" name="score84" />
+		5 <input type="radio" value="5" onclick="getElementById('ex84').value=this.value;" style="display:inline" name="score84" />
+		<input type="text" id="ex84" />
+	</div>
+	<br>
+	<h4><strong> 85. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex85.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex85').value=this.value; getElementById('ex85').show()" style="display:inline" name="score85" />
+		2 <input type="radio" value="2" onclick="getElementById('ex85').value=this.value;" style="display:inline" name="score85" />
+		3 <input type="radio" value="3" onclick="getElementById('ex85').value=this.value;" style="display:inline" name="score85" />
+		4 <input type="radio" value="4" onclick="getElementById('ex85').value=this.value;" style="display:inline" name="score85" />
+		5 <input type="radio" value="5" onclick="getElementById('ex85').value=this.value;" style="display:inline" name="score85" />
+		<input type="text" id="ex85" />
+	</div>
+	<br>
+	<h4><strong> 86. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex86.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex86').value=this.value; getElementById('ex86').show()" style="display:inline" name="score86" />
+		2 <input type="radio" value="2" onclick="getElementById('ex86').value=this.value;" style="display:inline" name="score86" />
+		3 <input type="radio" value="3" onclick="getElementById('ex86').value=this.value;" style="display:inline" name="score86" />
+		4 <input type="radio" value="4" onclick="getElementById('ex86').value=this.value;" style="display:inline" name="score86" />
+		5 <input type="radio" value="5" onclick="getElementById('ex86').value=this.value;" style="display:inline" name="score86" />
+		<input type="text" id="ex86" />
+	</div>
+	<br>
+	<h4><strong> 87. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex87.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex87').value=this.value; getElementById('ex87').show()" style="display:inline" name="score87" />
+		2 <input type="radio" value="2" onclick="getElementById('ex87').value=this.value;" style="display:inline" name="score87" />
+		3 <input type="radio" value="3" onclick="getElementById('ex87').value=this.value;" style="display:inline" name="score87" />
+		4 <input type="radio" value="4" onclick="getElementById('ex87').value=this.value;" style="display:inline" name="score87" />
+		5 <input type="radio" value="5" onclick="getElementById('ex87').value=this.value;" style="display:inline" name="score87" />
+		<input type="text" id="ex87" />
+	</div>
+	<br>
+	<h4><strong> 88. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex88.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex88').value=this.value; getElementById('ex88').show()" style="display:inline" name="score88" />
+		2 <input type="radio" value="2" onclick="getElementById('ex88').value=this.value;" style="display:inline" name="score88" />
+		3 <input type="radio" value="3" onclick="getElementById('ex88').value=this.value;" style="display:inline" name="score88" />
+		4 <input type="radio" value="4" onclick="getElementById('ex88').value=this.value;" style="display:inline" name="score88" />
+		5 <input type="radio" value="5" onclick="getElementById('ex88').value=this.value;" style="display:inline" name="score88" />
+		<input type="text" id="ex88" />
+	</div>
+	<br>
+	<h4><strong> 89. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex89.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex89').value=this.value; getElementById('ex89').show()" style="display:inline" name="score89" />
+		2 <input type="radio" value="2" onclick="getElementById('ex89').value=this.value;" style="display:inline" name="score89" />
+		3 <input type="radio" value="3" onclick="getElementById('ex89').value=this.value;" style="display:inline" name="score89" />
+		4 <input type="radio" value="4" onclick="getElementById('ex89').value=this.value;" style="display:inline" name="score89" />
+		5 <input type="radio" value="5" onclick="getElementById('ex89').value=this.value;" style="display:inline" name="score89" />
+		<input type="text" id="ex89" />
+	</div>
+	<br>
+	<h4><strong> 90. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex90.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex90').value=this.value; getElementById('ex90').show()" style="display:inline" name="score90" />
+		2 <input type="radio" value="2" onclick="getElementById('ex90').value=this.value;" style="display:inline" name="score90" />
+		3 <input type="radio" value="3" onclick="getElementById('ex90').value=this.value;" style="display:inline" name="score90" />
+		4 <input type="radio" value="4" onclick="getElementById('ex90').value=this.value;" style="display:inline" name="score90" />
+		5 <input type="radio" value="5" onclick="getElementById('ex90').value=this.value;" style="display:inline" name="score90" />
+		<input type="text" id="ex90" />
+	</div>
+	<br>
+	<h4><strong> 91. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex91.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex91').value=this.value; getElementById('ex91').show()" style="display:inline" name="score91" />
+		2 <input type="radio" value="2" onclick="getElementById('ex91').value=this.value;" style="display:inline" name="score91" />
+		3 <input type="radio" value="3" onclick="getElementById('ex91').value=this.value;" style="display:inline" name="score91" />
+		4 <input type="radio" value="4" onclick="getElementById('ex91').value=this.value;" style="display:inline" name="score91" />
+		5 <input type="radio" value="5" onclick="getElementById('ex91').value=this.value;" style="display:inline" name="score91" />
+		<input type="text" id="ex91" />
+	</div>
+	<br>
+	<h4><strong> 92. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex92.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex92').value=this.value; getElementById('ex92').show()" style="display:inline" name="score92" />
+		2 <input type="radio" value="2" onclick="getElementById('ex92').value=this.value;" style="display:inline" name="score92" />
+		3 <input type="radio" value="3" onclick="getElementById('ex92').value=this.value;" style="display:inline" name="score92" />
+		4 <input type="radio" value="4" onclick="getElementById('ex92').value=this.value;" style="display:inline" name="score92" />
+		5 <input type="radio" value="5" onclick="getElementById('ex92').value=this.value;" style="display:inline" name="score92" />
+		<input type="text" id="ex92" />
+	</div>
+	<br>
+	<h4><strong> 93. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex93.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex93').value=this.value; getElementById('ex93').show()" style="display:inline" name="score93" />
+		2 <input type="radio" value="2" onclick="getElementById('ex93').value=this.value;" style="display:inline" name="score93" />
+		3 <input type="radio" value="3" onclick="getElementById('ex93').value=this.value;" style="display:inline" name="score93" />
+		4 <input type="radio" value="4" onclick="getElementById('ex93').value=this.value;" style="display:inline" name="score93" />
+		5 <input type="radio" value="5" onclick="getElementById('ex93').value=this.value;" style="display:inline" name="score93" />
+		<input type="text" id="ex93" />
+	</div>
+	<br>
+	<h4><strong> 94. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex94.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex94').value=this.value; getElementById('ex94').show()" style="display:inline" name="score94" />
+		2 <input type="radio" value="2" onclick="getElementById('ex94').value=this.value;" style="display:inline" name="score94" />
+		3 <input type="radio" value="3" onclick="getElementById('ex94').value=this.value;" style="display:inline" name="score94" />
+		4 <input type="radio" value="4" onclick="getElementById('ex94').value=this.value;" style="display:inline" name="score94" />
+		5 <input type="radio" value="5" onclick="getElementById('ex94').value=this.value;" style="display:inline" name="score94" />
+		<input type="text" id="ex94" />
+	</div>
+	<br>
+	<h4><strong> 95. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex95.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex95').value=this.value; getElementById('ex95').show()" style="display:inline" name="score95" />
+		2 <input type="radio" value="2" onclick="getElementById('ex95').value=this.value;" style="display:inline" name="score95" />
+		3 <input type="radio" value="3" onclick="getElementById('ex95').value=this.value;" style="display:inline" name="score95" />
+		4 <input type="radio" value="4" onclick="getElementById('ex95').value=this.value;" style="display:inline" name="score95" />
+		5 <input type="radio" value="5" onclick="getElementById('ex95').value=this.value;" style="display:inline" name="score95" />
+		<input type="text" id="ex95" />
+	</div>
+	<br>
+	<h4><strong> 96. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex96.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex96').value=this.value; getElementById('ex96').show()" style="display:inline" name="score96" />
+		2 <input type="radio" value="2" onclick="getElementById('ex96').value=this.value;" style="display:inline" name="score96" />
+		3 <input type="radio" value="3" onclick="getElementById('ex96').value=this.value;" style="display:inline" name="score96" />
+		4 <input type="radio" value="4" onclick="getElementById('ex96').value=this.value;" style="display:inline" name="score96" />
+		5 <input type="radio" value="5" onclick="getElementById('ex96').value=this.value;" style="display:inline" name="score96" />
+		<input type="text" id="ex96" />
+	</div>
+	<br>
+	<h4><strong> 97. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex97.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex97').value=this.value; getElementById('ex97').show()" style="display:inline" name="score97" />
+		2 <input type="radio" value="2" onclick="getElementById('ex97').value=this.value;" style="display:inline" name="score97" />
+		3 <input type="radio" value="3" onclick="getElementById('ex97').value=this.value;" style="display:inline" name="score97" />
+		4 <input type="radio" value="4" onclick="getElementById('ex97').value=this.value;" style="display:inline" name="score97" />
+		5 <input type="radio" value="5" onclick="getElementById('ex97').value=this.value;" style="display:inline" name="score97" />
+		<input type="text" id="ex97" />
+	</div>
+	<br>
+	<h4><strong> 98. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex98.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex98').value=this.value; getElementById('ex98').show()" style="display:inline" name="score98" />
+		2 <input type="radio" value="2" onclick="getElementById('ex98').value=this.value;" style="display:inline" name="score98" />
+		3 <input type="radio" value="3" onclick="getElementById('ex98').value=this.value;" style="display:inline" name="score98" />
+		4 <input type="radio" value="4" onclick="getElementById('ex98').value=this.value;" style="display:inline" name="score98" />
+		5 <input type="radio" value="5" onclick="getElementById('ex98').value=this.value;" style="display:inline" name="score98" />
+		<input type="text" id="ex98" />
+	</div>
+	<br>
+	<h4><strong> 99. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex99.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex99').value=this.value; getElementById('ex99').show()" style="display:inline" name="score99" />
+		2 <input type="radio" value="2" onclick="getElementById('ex99').value=this.value;" style="display:inline" name="score99" />
+		3 <input type="radio" value="3" onclick="getElementById('ex99').value=this.value;" style="display:inline" name="score99" />
+		4 <input type="radio" value="4" onclick="getElementById('ex99').value=this.value;" style="display:inline" name="score99" />
+		5 <input type="radio" value="5" onclick="getElementById('ex99').value=this.value;" style="display:inline" name="score99" />
+		<input type="text" id="ex99" />
+	</div>
+	<br>
+	<h4><strong> 100. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex100.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex100').value=this.value; getElementById('ex100').show()" style="display:inline" name="score100" />
+		2 <input type="radio" value="2" onclick="getElementById('ex100').value=this.value;" style="display:inline" name="score100" />
+		3 <input type="radio" value="3" onclick="getElementById('ex100').value=this.value;" style="display:inline" name="score100" />
+		4 <input type="radio" value="4" onclick="getElementById('ex100').value=this.value;" style="display:inline" name="score100" />
+		5 <input type="radio" value="5" onclick="getElementById('ex100').value=this.value;" style="display:inline" name="score100" />
+		<input type="text" id="ex100" />
+	</div>
+	<br>
+	<h4><strong> 101. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex101.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex101').value=this.value; getElementById('ex101').show()" style="display:inline" name="score101" />
+		2 <input type="radio" value="2" onclick="getElementById('ex101').value=this.value;" style="display:inline" name="score101" />
+		3 <input type="radio" value="3" onclick="getElementById('ex101').value=this.value;" style="display:inline" name="score101" />
+		4 <input type="radio" value="4" onclick="getElementById('ex101').value=this.value;" style="display:inline" name="score101" />
+		5 <input type="radio" value="5" onclick="getElementById('ex101').value=this.value;" style="display:inline" name="score101" />
+		<input type="text" id="ex101" />
+	</div>
+	<br>
+	<h4><strong> 102. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex102.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex102').value=this.value; getElementById('ex102').show()" style="display:inline" name="score102" />
+		2 <input type="radio" value="2" onclick="getElementById('ex102').value=this.value;" style="display:inline" name="score102" />
+		3 <input type="radio" value="3" onclick="getElementById('ex102').value=this.value;" style="display:inline" name="score102" />
+		4 <input type="radio" value="4" onclick="getElementById('ex102').value=this.value;" style="display:inline" name="score102" />
+		5 <input type="radio" value="5" onclick="getElementById('ex102').value=this.value;" style="display:inline" name="score102" />
+		<input type="text" id="ex102" />
+	</div>
+	<br>
+	<h4><strong> 103. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex103.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex103').value=this.value; getElementById('ex103').show()" style="display:inline" name="score103" />
+		2 <input type="radio" value="2" onclick="getElementById('ex103').value=this.value;" style="display:inline" name="score103" />
+		3 <input type="radio" value="3" onclick="getElementById('ex103').value=this.value;" style="display:inline" name="score103" />
+		4 <input type="radio" value="4" onclick="getElementById('ex103').value=this.value;" style="display:inline" name="score103" />
+		5 <input type="radio" value="5" onclick="getElementById('ex103').value=this.value;" style="display:inline" name="score103" />
+		<input type="text" id="ex103" />
+	</div>
+	<br>
+	<h4><strong> 104. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex104.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex104').value=this.value; getElementById('ex104').show()" style="display:inline" name="score104" />
+		2 <input type="radio" value="2" onclick="getElementById('ex104').value=this.value;" style="display:inline" name="score104" />
+		3 <input type="radio" value="3" onclick="getElementById('ex104').value=this.value;" style="display:inline" name="score104" />
+		4 <input type="radio" value="4" onclick="getElementById('ex104').value=this.value;" style="display:inline" name="score104" />
+		5 <input type="radio" value="5" onclick="getElementById('ex104').value=this.value;" style="display:inline" name="score104" />
+		<input type="text" id="ex104" />
+	</div>
+	<br>
+	<h4><strong> 105. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex105.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex105').value=this.value; getElementById('ex105').show()" style="display:inline" name="score105" />
+		2 <input type="radio" value="2" onclick="getElementById('ex105').value=this.value;" style="display:inline" name="score105" />
+		3 <input type="radio" value="3" onclick="getElementById('ex105').value=this.value;" style="display:inline" name="score105" />
+		4 <input type="radio" value="4" onclick="getElementById('ex105').value=this.value;" style="display:inline" name="score105" />
+		5 <input type="radio" value="5" onclick="getElementById('ex105').value=this.value;" style="display:inline" name="score105" />
+		<input type="text" id="ex105" />
+	</div>
+	<br>
+	<h4><strong> 106. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex106.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex106').value=this.value; getElementById('ex106').show()" style="display:inline" name="score106" />
+		2 <input type="radio" value="2" onclick="getElementById('ex106').value=this.value;" style="display:inline" name="score106" />
+		3 <input type="radio" value="3" onclick="getElementById('ex106').value=this.value;" style="display:inline" name="score106" />
+		4 <input type="radio" value="4" onclick="getElementById('ex106').value=this.value;" style="display:inline" name="score106" />
+		5 <input type="radio" value="5" onclick="getElementById('ex106').value=this.value;" style="display:inline" name="score106" />
+		<input type="text" id="ex106" />
+	</div>
+	<br>
+	<h4><strong> 107. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex107.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex107').value=this.value; getElementById('ex107').show()" style="display:inline" name="score107" />
+		2 <input type="radio" value="2" onclick="getElementById('ex107').value=this.value;" style="display:inline" name="score107" />
+		3 <input type="radio" value="3" onclick="getElementById('ex107').value=this.value;" style="display:inline" name="score107" />
+		4 <input type="radio" value="4" onclick="getElementById('ex107').value=this.value;" style="display:inline" name="score107" />
+		5 <input type="radio" value="5" onclick="getElementById('ex107').value=this.value;" style="display:inline" name="score107" />
+		<input type="text" id="ex107" />
+	</div>
+	<br>
+	<h4><strong> 108. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex108.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex108').value=this.value; getElementById('ex108').show()" style="display:inline" name="score108" />
+		2 <input type="radio" value="2" onclick="getElementById('ex108').value=this.value;" style="display:inline" name="score108" />
+		3 <input type="radio" value="3" onclick="getElementById('ex108').value=this.value;" style="display:inline" name="score108" />
+		4 <input type="radio" value="4" onclick="getElementById('ex108').value=this.value;" style="display:inline" name="score108" />
+		5 <input type="radio" value="5" onclick="getElementById('ex108').value=this.value;" style="display:inline" name="score108" />
+		<input type="text" id="ex108" />
+	</div>
+	<br>
+	<h4><strong> 109. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex109.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex109').value=this.value; getElementById('ex109').show()" style="display:inline" name="score109" />
+		2 <input type="radio" value="2" onclick="getElementById('ex109').value=this.value;" style="display:inline" name="score109" />
+		3 <input type="radio" value="3" onclick="getElementById('ex109').value=this.value;" style="display:inline" name="score109" />
+		4 <input type="radio" value="4" onclick="getElementById('ex109').value=this.value;" style="display:inline" name="score109" />
+		5 <input type="radio" value="5" onclick="getElementById('ex109').value=this.value;" style="display:inline" name="score109" />
+		<input type="text" id="ex109" />
+	</div>
+	<br>
+	<h4><strong> 110. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex110.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex110').value=this.value; getElementById('ex110').show()" style="display:inline" name="score110" />
+		2 <input type="radio" value="2" onclick="getElementById('ex110').value=this.value;" style="display:inline" name="score110" />
+		3 <input type="radio" value="3" onclick="getElementById('ex110').value=this.value;" style="display:inline" name="score110" />
+		4 <input type="radio" value="4" onclick="getElementById('ex110').value=this.value;" style="display:inline" name="score110" />
+		5 <input type="radio" value="5" onclick="getElementById('ex110').value=this.value;" style="display:inline" name="score110" />
+		<input type="text" id="ex110" />
+	</div>
+	<br>
+	<h4><strong> 111. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex111.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex111').value=this.value; getElementById('ex111').show()" style="display:inline" name="score111" />
+		2 <input type="radio" value="2" onclick="getElementById('ex111').value=this.value;" style="display:inline" name="score111" />
+		3 <input type="radio" value="3" onclick="getElementById('ex111').value=this.value;" style="display:inline" name="score111" />
+		4 <input type="radio" value="4" onclick="getElementById('ex111').value=this.value;" style="display:inline" name="score111" />
+		5 <input type="radio" value="5" onclick="getElementById('ex111').value=this.value;" style="display:inline" name="score111" />
+		<input type="text" id="ex111" />
+	</div>
+	<br>
+	<h4><strong> 112. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex112.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex112').value=this.value; getElementById('ex112').show()" style="display:inline" name="score112" />
+		2 <input type="radio" value="2" onclick="getElementById('ex112').value=this.value;" style="display:inline" name="score112" />
+		3 <input type="radio" value="3" onclick="getElementById('ex112').value=this.value;" style="display:inline" name="score112" />
+		4 <input type="radio" value="4" onclick="getElementById('ex112').value=this.value;" style="display:inline" name="score112" />
+		5 <input type="radio" value="5" onclick="getElementById('ex112').value=this.value;" style="display:inline" name="score112" />
+		<input type="text" id="ex112" />
+	</div>
+	<br>
+	<h4><strong> 113. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex113.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex113').value=this.value; getElementById('ex113').show()" style="display:inline" name="score113" />
+		2 <input type="radio" value="2" onclick="getElementById('ex113').value=this.value;" style="display:inline" name="score113" />
+		3 <input type="radio" value="3" onclick="getElementById('ex113').value=this.value;" style="display:inline" name="score113" />
+		4 <input type="radio" value="4" onclick="getElementById('ex113').value=this.value;" style="display:inline" name="score113" />
+		5 <input type="radio" value="5" onclick="getElementById('ex113').value=this.value;" style="display:inline" name="score113" />
+		<input type="text" id="ex113" />
+	</div>
+	<br>
+	<h4><strong> 114. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex114.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex114').value=this.value; getElementById('ex114').show()" style="display:inline" name="score114" />
+		2 <input type="radio" value="2" onclick="getElementById('ex114').value=this.value;" style="display:inline" name="score114" />
+		3 <input type="radio" value="3" onclick="getElementById('ex114').value=this.value;" style="display:inline" name="score114" />
+		4 <input type="radio" value="4" onclick="getElementById('ex114').value=this.value;" style="display:inline" name="score114" />
+		5 <input type="radio" value="5" onclick="getElementById('ex114').value=this.value;" style="display:inline" name="score114" />
+		<input type="text" id="ex114" />
+	</div>
+	<br>
+	<h4><strong> 115. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex115.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex115').value=this.value; getElementById('ex115').show()" style="display:inline" name="score115" />
+		2 <input type="radio" value="2" onclick="getElementById('ex115').value=this.value;" style="display:inline" name="score115" />
+		3 <input type="radio" value="3" onclick="getElementById('ex115').value=this.value;" style="display:inline" name="score115" />
+		4 <input type="radio" value="4" onclick="getElementById('ex115').value=this.value;" style="display:inline" name="score115" />
+		5 <input type="radio" value="5" onclick="getElementById('ex115').value=this.value;" style="display:inline" name="score115" />
+		<input type="text" id="ex115" />
+	</div>
+	<br>
+	<h4><strong> 116. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex116.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex116').value=this.value; getElementById('ex116').show()" style="display:inline" name="score116" />
+		2 <input type="radio" value="2" onclick="getElementById('ex116').value=this.value;" style="display:inline" name="score116" />
+		3 <input type="radio" value="3" onclick="getElementById('ex116').value=this.value;" style="display:inline" name="score116" />
+		4 <input type="radio" value="4" onclick="getElementById('ex116').value=this.value;" style="display:inline" name="score116" />
+		5 <input type="radio" value="5" onclick="getElementById('ex116').value=this.value;" style="display:inline" name="score116" />
+		<input type="text" id="ex116" />
+	</div>
+	<br>
+	<h4><strong> 117. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex117.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex117').value=this.value; getElementById('ex117').show()" style="display:inline" name="score117" />
+		2 <input type="radio" value="2" onclick="getElementById('ex117').value=this.value;" style="display:inline" name="score117" />
+		3 <input type="radio" value="3" onclick="getElementById('ex117').value=this.value;" style="display:inline" name="score117" />
+		4 <input type="radio" value="4" onclick="getElementById('ex117').value=this.value;" style="display:inline" name="score117" />
+		5 <input type="radio" value="5" onclick="getElementById('ex117').value=this.value;" style="display:inline" name="score117" />
+		<input type="text" id="ex117" />
+	</div>
+	<br>
+	<h4><strong> 118. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex118.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex118').value=this.value; getElementById('ex118').show()" style="display:inline" name="score118" />
+		2 <input type="radio" value="2" onclick="getElementById('ex118').value=this.value;" style="display:inline" name="score118" />
+		3 <input type="radio" value="3" onclick="getElementById('ex118').value=this.value;" style="display:inline" name="score118" />
+		4 <input type="radio" value="4" onclick="getElementById('ex118').value=this.value;" style="display:inline" name="score118" />
+		5 <input type="radio" value="5" onclick="getElementById('ex118').value=this.value;" style="display:inline" name="score118" />
+		<input type="text" id="ex118" />
+	</div>
+	<br>
+	<h4><strong> 119. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex119.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex119').value=this.value; getElementById('ex119').show()" style="display:inline" name="score119" />
+		2 <input type="radio" value="2" onclick="getElementById('ex119').value=this.value;" style="display:inline" name="score119" />
+		3 <input type="radio" value="3" onclick="getElementById('ex119').value=this.value;" style="display:inline" name="score119" />
+		4 <input type="radio" value="4" onclick="getElementById('ex119').value=this.value;" style="display:inline" name="score119" />
+		5 <input type="radio" value="5" onclick="getElementById('ex119').value=this.value;" style="display:inline" name="score119" />
+		<input type="text" id="ex119" />
+	</div>
+	<br>
+	<h4><strong> 120. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex120.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex120').value=this.value; getElementById('ex120').show()" style="display:inline" name="score120" />
+		2 <input type="radio" value="2" onclick="getElementById('ex120').value=this.value;" style="display:inline" name="score120" />
+		3 <input type="radio" value="3" onclick="getElementById('ex120').value=this.value;" style="display:inline" name="score120" />
+		4 <input type="radio" value="4" onclick="getElementById('ex120').value=this.value;" style="display:inline" name="score120" />
+		5 <input type="radio" value="5" onclick="getElementById('ex120').value=this.value;" style="display:inline" name="score120" />
+		<input type="text" id="ex120" />
+	</div>
+	<br>
+	<h4><strong> 121. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex121.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex121').value=this.value; getElementById('ex121').show()" style="display:inline" name="score121" />
+		2 <input type="radio" value="2" onclick="getElementById('ex121').value=this.value;" style="display:inline" name="score121" />
+		3 <input type="radio" value="3" onclick="getElementById('ex121').value=this.value;" style="display:inline" name="score121" />
+		4 <input type="radio" value="4" onclick="getElementById('ex121').value=this.value;" style="display:inline" name="score121" />
+		5 <input type="radio" value="5" onclick="getElementById('ex121').value=this.value;" style="display:inline" name="score121" />
+		<input type="text" id="ex121" />
+	</div>
+	<br>
+	<h4><strong> 122. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex122.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex122').value=this.value; getElementById('ex122').show()" style="display:inline" name="score122" />
+		2 <input type="radio" value="2" onclick="getElementById('ex122').value=this.value;" style="display:inline" name="score122" />
+		3 <input type="radio" value="3" onclick="getElementById('ex122').value=this.value;" style="display:inline" name="score122" />
+		4 <input type="radio" value="4" onclick="getElementById('ex122').value=this.value;" style="display:inline" name="score122" />
+		5 <input type="radio" value="5" onclick="getElementById('ex122').value=this.value;" style="display:inline" name="score122" />
+		<input type="text" id="ex122" />
+	</div>
+	<br>
+	<h4><strong> 123. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex123.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex123').value=this.value; getElementById('ex123').show()" style="display:inline" name="score123" />
+		2 <input type="radio" value="2" onclick="getElementById('ex123').value=this.value;" style="display:inline" name="score123" />
+		3 <input type="radio" value="3" onclick="getElementById('ex123').value=this.value;" style="display:inline" name="score123" />
+		4 <input type="radio" value="4" onclick="getElementById('ex123').value=this.value;" style="display:inline" name="score123" />
+		5 <input type="radio" value="5" onclick="getElementById('ex123').value=this.value;" style="display:inline" name="score123" />
+		<input type="text" id="ex123" />
+	</div>
+	<br>
+	<h4><strong> 124. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex124.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex124').value=this.value; getElementById('ex124').show()" style="display:inline" name="score124" />
+		2 <input type="radio" value="2" onclick="getElementById('ex124').value=this.value;" style="display:inline" name="score124" />
+		3 <input type="radio" value="3" onclick="getElementById('ex124').value=this.value;" style="display:inline" name="score124" />
+		4 <input type="radio" value="4" onclick="getElementById('ex124').value=this.value;" style="display:inline" name="score124" />
+		5 <input type="radio" value="5" onclick="getElementById('ex124').value=this.value;" style="display:inline" name="score124" />
+		<input type="text" id="ex124" />
+	</div>
+	<br>
+	<h4><strong> 125. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex125.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex125').value=this.value; getElementById('ex125').show()" style="display:inline" name="score125" />
+		2 <input type="radio" value="2" onclick="getElementById('ex125').value=this.value;" style="display:inline" name="score125" />
+		3 <input type="radio" value="3" onclick="getElementById('ex125').value=this.value;" style="display:inline" name="score125" />
+		4 <input type="radio" value="4" onclick="getElementById('ex125').value=this.value;" style="display:inline" name="score125" />
+		5 <input type="radio" value="5" onclick="getElementById('ex125').value=this.value;" style="display:inline" name="score125" />
+		<input type="text" id="ex125" />
+	</div>
+	<br>
+	<h4><strong> 126. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex126.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex126').value=this.value; getElementById('ex126').show()" style="display:inline" name="score126" />
+		2 <input type="radio" value="2" onclick="getElementById('ex126').value=this.value;" style="display:inline" name="score126" />
+		3 <input type="radio" value="3" onclick="getElementById('ex126').value=this.value;" style="display:inline" name="score126" />
+		4 <input type="radio" value="4" onclick="getElementById('ex126').value=this.value;" style="display:inline" name="score126" />
+		5 <input type="radio" value="5" onclick="getElementById('ex126').value=this.value;" style="display:inline" name="score126" />
+		<input type="text" id="ex126" />
+	</div>
+	<br>
+	<h4><strong> 127. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex127.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex127').value=this.value; getElementById('ex127').show()" style="display:inline" name="score127" />
+		2 <input type="radio" value="2" onclick="getElementById('ex127').value=this.value;" style="display:inline" name="score127" />
+		3 <input type="radio" value="3" onclick="getElementById('ex127').value=this.value;" style="display:inline" name="score127" />
+		4 <input type="radio" value="4" onclick="getElementById('ex127').value=this.value;" style="display:inline" name="score127" />
+		5 <input type="radio" value="5" onclick="getElementById('ex127').value=this.value;" style="display:inline" name="score127" />
+		<input type="text" id="ex127" />
+	</div>
+	<br>
+	<h4><strong> 128. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex128.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex128').value=this.value; getElementById('ex128').show()" style="display:inline" name="score128" />
+		2 <input type="radio" value="2" onclick="getElementById('ex128').value=this.value;" style="display:inline" name="score128" />
+		3 <input type="radio" value="3" onclick="getElementById('ex128').value=this.value;" style="display:inline" name="score128" />
+		4 <input type="radio" value="4" onclick="getElementById('ex128').value=this.value;" style="display:inline" name="score128" />
+		5 <input type="radio" value="5" onclick="getElementById('ex128').value=this.value;" style="display:inline" name="score128" />
+		<input type="text" id="ex128" />
+	</div>
+	<br>
+	<h4><strong> 129. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex129.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex129').value=this.value; getElementById('ex129').show()" style="display:inline" name="score129" />
+		2 <input type="radio" value="2" onclick="getElementById('ex129').value=this.value;" style="display:inline" name="score129" />
+		3 <input type="radio" value="3" onclick="getElementById('ex129').value=this.value;" style="display:inline" name="score129" />
+		4 <input type="radio" value="4" onclick="getElementById('ex129').value=this.value;" style="display:inline" name="score129" />
+		5 <input type="radio" value="5" onclick="getElementById('ex129').value=this.value;" style="display:inline" name="score129" />
+		<input type="text" id="ex129" />
+	</div>
+	<br>
+	<h4><strong> 130. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex130.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex130').value=this.value; getElementById('ex130').show()" style="display:inline" name="score130" />
+		2 <input type="radio" value="2" onclick="getElementById('ex130').value=this.value;" style="display:inline" name="score130" />
+		3 <input type="radio" value="3" onclick="getElementById('ex130').value=this.value;" style="display:inline" name="score130" />
+		4 <input type="radio" value="4" onclick="getElementById('ex130').value=this.value;" style="display:inline" name="score130" />
+		5 <input type="radio" value="5" onclick="getElementById('ex130').value=this.value;" style="display:inline" name="score130" />
+		<input type="text" id="ex130" />
+	</div>
+	<br>
+	<h4><strong> 131. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex131.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex131').value=this.value; getElementById('ex131').show()" style="display:inline" name="score131" />
+		2 <input type="radio" value="2" onclick="getElementById('ex131').value=this.value;" style="display:inline" name="score131" />
+		3 <input type="radio" value="3" onclick="getElementById('ex131').value=this.value;" style="display:inline" name="score131" />
+		4 <input type="radio" value="4" onclick="getElementById('ex131').value=this.value;" style="display:inline" name="score131" />
+		5 <input type="radio" value="5" onclick="getElementById('ex131').value=this.value;" style="display:inline" name="score131" />
+		<input type="text" id="ex131" />
+	</div>
+	<br>
+	<h4><strong> 132. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex132.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex132').value=this.value; getElementById('ex132').show()" style="display:inline" name="score132" />
+		2 <input type="radio" value="2" onclick="getElementById('ex132').value=this.value;" style="display:inline" name="score132" />
+		3 <input type="radio" value="3" onclick="getElementById('ex132').value=this.value;" style="display:inline" name="score132" />
+		4 <input type="radio" value="4" onclick="getElementById('ex132').value=this.value;" style="display:inline" name="score132" />
+		5 <input type="radio" value="5" onclick="getElementById('ex132').value=this.value;" style="display:inline" name="score132" />
+		<input type="text" id="ex132" />
+	</div>
+	<br>
+	<h4><strong> 133. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex133.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex133').value=this.value; getElementById('ex133').show()" style="display:inline" name="score133" />
+		2 <input type="radio" value="2" onclick="getElementById('ex133').value=this.value;" style="display:inline" name="score133" />
+		3 <input type="radio" value="3" onclick="getElementById('ex133').value=this.value;" style="display:inline" name="score133" />
+		4 <input type="radio" value="4" onclick="getElementById('ex133').value=this.value;" style="display:inline" name="score133" />
+		5 <input type="radio" value="5" onclick="getElementById('ex133').value=this.value;" style="display:inline" name="score133" />
+		<input type="text" id="ex133" />
+	</div>
+	<br>
+	<h4><strong> 134. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex134.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex134').value=this.value; getElementById('ex134').show()" style="display:inline" name="score134" />
+		2 <input type="radio" value="2" onclick="getElementById('ex134').value=this.value;" style="display:inline" name="score134" />
+		3 <input type="radio" value="3" onclick="getElementById('ex134').value=this.value;" style="display:inline" name="score134" />
+		4 <input type="radio" value="4" onclick="getElementById('ex134').value=this.value;" style="display:inline" name="score134" />
+		5 <input type="radio" value="5" onclick="getElementById('ex134').value=this.value;" style="display:inline" name="score134" />
+		<input type="text" id="ex134" />
+	</div>
+	<br>
+	<h4><strong> 135. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex135.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex135').value=this.value; getElementById('ex135').show()" style="display:inline" name="score135" />
+		2 <input type="radio" value="2" onclick="getElementById('ex135').value=this.value;" style="display:inline" name="score135" />
+		3 <input type="radio" value="3" onclick="getElementById('ex135').value=this.value;" style="display:inline" name="score135" />
+		4 <input type="radio" value="4" onclick="getElementById('ex135').value=this.value;" style="display:inline" name="score135" />
+		5 <input type="radio" value="5" onclick="getElementById('ex135').value=this.value;" style="display:inline" name="score135" />
+		<input type="text" id="ex135" />
+	</div>
+	<br>
+	<h4><strong> 136. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex136.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex136').value=this.value; getElementById('ex136').show()" style="display:inline" name="score136" />
+		2 <input type="radio" value="2" onclick="getElementById('ex136').value=this.value;" style="display:inline" name="score136" />
+		3 <input type="radio" value="3" onclick="getElementById('ex136').value=this.value;" style="display:inline" name="score136" />
+		4 <input type="radio" value="4" onclick="getElementById('ex136').value=this.value;" style="display:inline" name="score136" />
+		5 <input type="radio" value="5" onclick="getElementById('ex136').value=this.value;" style="display:inline" name="score136" />
+		<input type="text" id="ex136" />
+	</div>
+	<br>
+	<h4><strong> 137. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex137.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex137').value=this.value; getElementById('ex137').show()" style="display:inline" name="score137" />
+		2 <input type="radio" value="2" onclick="getElementById('ex137').value=this.value;" style="display:inline" name="score137" />
+		3 <input type="radio" value="3" onclick="getElementById('ex137').value=this.value;" style="display:inline" name="score137" />
+		4 <input type="radio" value="4" onclick="getElementById('ex137').value=this.value;" style="display:inline" name="score137" />
+		5 <input type="radio" value="5" onclick="getElementById('ex137').value=this.value;" style="display:inline" name="score137" />
+		<input type="text" id="ex137" />
+	</div>
+	<br>
+	<h4><strong> 138. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex138.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex138').value=this.value; getElementById('ex138').show()" style="display:inline" name="score138" />
+		2 <input type="radio" value="2" onclick="getElementById('ex138').value=this.value;" style="display:inline" name="score138" />
+		3 <input type="radio" value="3" onclick="getElementById('ex138').value=this.value;" style="display:inline" name="score138" />
+		4 <input type="radio" value="4" onclick="getElementById('ex138').value=this.value;" style="display:inline" name="score138" />
+		5 <input type="radio" value="5" onclick="getElementById('ex138').value=this.value;" style="display:inline" name="score138" />
+		<input type="text" id="ex138" />
+	</div>
+	<br>
+	<h4><strong> 139. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex139.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex139').value=this.value; getElementById('ex139').show()" style="display:inline" name="score139" />
+		2 <input type="radio" value="2" onclick="getElementById('ex139').value=this.value;" style="display:inline" name="score139" />
+		3 <input type="radio" value="3" onclick="getElementById('ex139').value=this.value;" style="display:inline" name="score139" />
+		4 <input type="radio" value="4" onclick="getElementById('ex139').value=this.value;" style="display:inline" name="score139" />
+		5 <input type="radio" value="5" onclick="getElementById('ex139').value=this.value;" style="display:inline" name="score139" />
+		<input type="text" id="ex139" />
+	</div>
+	<br>
+	<h4><strong> 140. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex140.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex140').value=this.value; getElementById('ex140').show()" style="display:inline" name="score140" />
+		2 <input type="radio" value="2" onclick="getElementById('ex140').value=this.value;" style="display:inline" name="score140" />
+		3 <input type="radio" value="3" onclick="getElementById('ex140').value=this.value;" style="display:inline" name="score140" />
+		4 <input type="radio" value="4" onclick="getElementById('ex140').value=this.value;" style="display:inline" name="score140" />
+		5 <input type="radio" value="5" onclick="getElementById('ex140').value=this.value;" style="display:inline" name="score140" />
+		<input type="text" id="ex140" />
+	</div>
+	<br>
+	<h4><strong> 141. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex141.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex141').value=this.value; getElementById('ex141').show()" style="display:inline" name="score141" />
+		2 <input type="radio" value="2" onclick="getElementById('ex141').value=this.value;" style="display:inline" name="score141" />
+		3 <input type="radio" value="3" onclick="getElementById('ex141').value=this.value;" style="display:inline" name="score141" />
+		4 <input type="radio" value="4" onclick="getElementById('ex141').value=this.value;" style="display:inline" name="score141" />
+		5 <input type="radio" value="5" onclick="getElementById('ex141').value=this.value;" style="display:inline" name="score141" />
+		<input type="text" id="ex141" />
+	</div>
+	<br>
+	<h4><strong> 142. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex142.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex142').value=this.value; getElementById('ex142').show()" style="display:inline" name="score142" />
+		2 <input type="radio" value="2" onclick="getElementById('ex142').value=this.value;" style="display:inline" name="score142" />
+		3 <input type="radio" value="3" onclick="getElementById('ex142').value=this.value;" style="display:inline" name="score142" />
+		4 <input type="radio" value="4" onclick="getElementById('ex142').value=this.value;" style="display:inline" name="score142" />
+		5 <input type="radio" value="5" onclick="getElementById('ex142').value=this.value;" style="display:inline" name="score142" />
+		<input type="text" id="ex142" />
+	</div>
+	<br>
+	<h4><strong> 143. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex143.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex143').value=this.value; getElementById('ex143').show()" style="display:inline" name="score143" />
+		2 <input type="radio" value="2" onclick="getElementById('ex143').value=this.value;" style="display:inline" name="score143" />
+		3 <input type="radio" value="3" onclick="getElementById('ex143').value=this.value;" style="display:inline" name="score143" />
+		4 <input type="radio" value="4" onclick="getElementById('ex143').value=this.value;" style="display:inline" name="score143" />
+		5 <input type="radio" value="5" onclick="getElementById('ex143').value=this.value;" style="display:inline" name="score143" />
+		<input type="text" id="ex143" />
+	</div>
+	<br>
+	<h4><strong> 144. Listen the sample and rate a score from 1 to 5 based on how natural the speech is:</strong></h4>
+	<h4>(1: Very bad 2: Bad 3: Fair 4: Good 5: Very good)</h4>
+	<audio controls preload="none">
+		<source src="./samples/Test/GE-N-TTS-VCTK/ex144.wav">
+	</audio>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex144').value=this.value; getElementById('ex144').show()" style="display:inline" name="score144" />
+		2 <input type="radio" value="2" onclick="getElementById('ex144').value=this.value;" style="display:inline" name="score144" />
+		3 <input type="radio" value="3" onclick="getElementById('ex144').value=this.value;" style="display:inline" name="score144" />
+		4 <input type="radio" value="4" onclick="getElementById('ex144').value=this.value;" style="display:inline" name="score144" />
+		5 <input type="radio" value="5" onclick="getElementById('ex144').value=this.value;" style="display:inline" name="score144" />
+		<input type="text" id="ex144" />
+	</div>
+	<br>
+
+
+
+
+    <br>
+    <input id="download_btn" type="submit" class="btn" style="overflow:hidden;padding: 5px 5px; border-radius: 3px;font-size: 10.5pt; width:250px ; background-color: #121111; font-weight: bold;" onClick="download();" value="Download"/ >
+
+  </form> 
+  
+  </body>

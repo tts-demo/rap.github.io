@@ -1,0 +1,1300 @@
+---
+layout: default
+---
+
+	
+<script language="Javascript" >
+function download() {
+  var filename = window.document.myform.docname.value;
+  var pom = document.createElement('a');
+	
+  const form = window.document.getElementById('form-id');
+  var id_list = ['docname', 'name', 'ex1', 'ex2', 'ex3', 'ex4', 'ex5', 'ex6', 'ex7', 'ex8', 'ex9', 'ex10', 'ex11', 'ex12', 'ex13', 'ex14', 'ex15', 'ex16', 'ex17', 'ex18', 
+		 'ex19', 'ex20', 'ex21', 'ex22', 'ex23', 'ex24', 'ex25', 'ex26', 'ex27', 'ex28', 'ex29', 'ex30', 'ex31', 'ex32', 'ex33', 'ex34', 'ex35', 'ex36', 'ex37', 
+		 'ex38', 'ex39', 'ex40']
+  var arr = [];
+  for (i=0; i<id_list.length; i++){
+
+	arr.push([id_list[i], form[id_list[i]].value])
+  }
+  
+  
+ 
+  pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + arr);
+
+
+  pom.setAttribute('download', filename);
+
+  pom.style.display = 'none';
+  document.body.appendChild(pom);
+
+  pom.click();
+
+  document.body.removeChild(pom);
+}
+</script>
+
+<div style="width: 120%;">
+  
+  <h2><strong>Audio Naturalness Comparison</strong></h2>
+  
+  <body>
+    Below, we provide some examples for speech naturalness comparison <br>
+    <br>
+  
+  <form id="form-id" name="myform" method="post" >
+    Filename: <input type="text" id="docname" value="GE_LS_comparison.txt" /> 
+    <br>
+    Name: <input type="text" id="name" placeholder="Write your name"/>
+	  
+	<h4><strong> 1. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex1_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex1_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex1').value=this.value; getElementById('ex1').show()" style="display:inline" name="score1" />
+		2 <input type="radio" value="2" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		3 <input type="radio" value="3" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		4 <input type="radio" value="4" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		5 <input type="radio" value="5" onclick="getElementById('ex1').value=this.value;" style="display:inline" name="score1" />
+		<input type="text" id="ex1" />
+	</div>
+	<br>
+	<h4><strong> 2. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex2_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex2_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex2').value=this.value; getElementById('ex2').show()" style="display:inline" name="score2" />
+		2 <input type="radio" value="2" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		3 <input type="radio" value="3" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		4 <input type="radio" value="4" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		5 <input type="radio" value="5" onclick="getElementById('ex2').value=this.value;" style="display:inline" name="score2" />
+		<input type="text" id="ex2" />
+	</div>
+	<br>
+	<h4><strong> 3. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex3_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex3_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex3').value=this.value; getElementById('ex3').show()" style="display:inline" name="score3" />
+		2 <input type="radio" value="2" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		3 <input type="radio" value="3" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		4 <input type="radio" value="4" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		5 <input type="radio" value="5" onclick="getElementById('ex3').value=this.value;" style="display:inline" name="score3" />
+		<input type="text" id="ex3" />
+	</div>
+	<br>
+	<h4><strong> 4. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex4_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex4_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex4').value=this.value; getElementById('ex4').show()" style="display:inline" name="score4" />
+		2 <input type="radio" value="2" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		3 <input type="radio" value="3" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		4 <input type="radio" value="4" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		5 <input type="radio" value="5" onclick="getElementById('ex4').value=this.value;" style="display:inline" name="score4" />
+		<input type="text" id="ex4" />
+	</div>
+	<br>
+	<h4><strong> 5. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex5_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex5_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex5').value=this.value; getElementById('ex5').show()" style="display:inline" name="score5" />
+		2 <input type="radio" value="2" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		3 <input type="radio" value="3" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		4 <input type="radio" value="4" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		5 <input type="radio" value="5" onclick="getElementById('ex5').value=this.value;" style="display:inline" name="score5" />
+		<input type="text" id="ex5" />
+	</div>
+	<br>
+	<h4><strong> 6. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex6_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex6_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex6').value=this.value; getElementById('ex6').show()" style="display:inline" name="score6" />
+		2 <input type="radio" value="2" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		3 <input type="radio" value="3" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		4 <input type="radio" value="4" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		5 <input type="radio" value="5" onclick="getElementById('ex6').value=this.value;" style="display:inline" name="score6" />
+		<input type="text" id="ex6" />
+	</div>
+	<br>
+	<h4><strong> 7. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex7_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex7_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex7').value=this.value; getElementById('ex7').show()" style="display:inline" name="score7" />
+		2 <input type="radio" value="2" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		3 <input type="radio" value="3" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		4 <input type="radio" value="4" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		5 <input type="radio" value="5" onclick="getElementById('ex7').value=this.value;" style="display:inline" name="score7" />
+		<input type="text" id="ex7" />
+	</div>
+	<br>
+	<h4><strong> 8. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex8_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex8_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex8').value=this.value; getElementById('ex8').show()" style="display:inline" name="score8" />
+		2 <input type="radio" value="2" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		3 <input type="radio" value="3" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		4 <input type="radio" value="4" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		5 <input type="radio" value="5" onclick="getElementById('ex8').value=this.value;" style="display:inline" name="score8" />
+		<input type="text" id="ex8" />
+	</div>
+	<br>
+	<h4><strong> 9. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex9_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex9_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex9').value=this.value; getElementById('ex9').show()" style="display:inline" name="score9" />
+		2 <input type="radio" value="2" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		3 <input type="radio" value="3" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		4 <input type="radio" value="4" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		5 <input type="radio" value="5" onclick="getElementById('ex9').value=this.value;" style="display:inline" name="score9" />
+		<input type="text" id="ex9" />
+	</div>
+	<br>
+	<h4><strong> 10. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex10_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex10_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex10').value=this.value; getElementById('ex10').show()" style="display:inline" name="score10" />
+		2 <input type="radio" value="2" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		3 <input type="radio" value="3" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		4 <input type="radio" value="4" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		5 <input type="radio" value="5" onclick="getElementById('ex10').value=this.value;" style="display:inline" name="score10" />
+		<input type="text" id="ex10" />
+	</div>
+	<br>
+	<h4><strong> 11. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex11_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex11_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex11').value=this.value; getElementById('ex11').show()" style="display:inline" name="score11" />
+		2 <input type="radio" value="2" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		3 <input type="radio" value="3" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		4 <input type="radio" value="4" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		5 <input type="radio" value="5" onclick="getElementById('ex11').value=this.value;" style="display:inline" name="score11" />
+		<input type="text" id="ex11" />
+	</div>
+	<br>
+	<h4><strong> 12. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex12_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex12_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex12').value=this.value; getElementById('ex12').show()" style="display:inline" name="score12" />
+		2 <input type="radio" value="2" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		3 <input type="radio" value="3" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		4 <input type="radio" value="4" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		5 <input type="radio" value="5" onclick="getElementById('ex12').value=this.value;" style="display:inline" name="score12" />
+		<input type="text" id="ex12" />
+	</div>
+	<br>
+	<h4><strong> 13. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex13_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex13_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex13').value=this.value; getElementById('ex13').show()" style="display:inline" name="score13" />
+		2 <input type="radio" value="2" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		3 <input type="radio" value="3" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		4 <input type="radio" value="4" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		5 <input type="radio" value="5" onclick="getElementById('ex13').value=this.value;" style="display:inline" name="score13" />
+		<input type="text" id="ex13" />
+	</div>
+	<br>
+	<h4><strong> 14. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex14_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex14_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex14').value=this.value; getElementById('ex14').show()" style="display:inline" name="score14" />
+		2 <input type="radio" value="2" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		3 <input type="radio" value="3" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		4 <input type="radio" value="4" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		5 <input type="radio" value="5" onclick="getElementById('ex14').value=this.value;" style="display:inline" name="score14" />
+		<input type="text" id="ex14" />
+	</div>
+	<br>
+	<h4><strong> 15. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex15_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex15_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex15').value=this.value; getElementById('ex15').show()" style="display:inline" name="score15" />
+		2 <input type="radio" value="2" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		3 <input type="radio" value="3" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		4 <input type="radio" value="4" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		5 <input type="radio" value="5" onclick="getElementById('ex15').value=this.value;" style="display:inline" name="score15" />
+		<input type="text" id="ex15" />
+	</div>
+	<br>
+	<h4><strong> 16. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex16_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex16_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex16').value=this.value; getElementById('ex16').show()" style="display:inline" name="score16" />
+		2 <input type="radio" value="2" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		3 <input type="radio" value="3" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		4 <input type="radio" value="4" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		5 <input type="radio" value="5" onclick="getElementById('ex16').value=this.value;" style="display:inline" name="score16" />
+		<input type="text" id="ex16" />
+	</div>
+	<br>
+	<h4><strong> 17. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex17_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex17_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex17').value=this.value; getElementById('ex17').show()" style="display:inline" name="score17" />
+		2 <input type="radio" value="2" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		3 <input type="radio" value="3" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		4 <input type="radio" value="4" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		5 <input type="radio" value="5" onclick="getElementById('ex17').value=this.value;" style="display:inline" name="score17" />
+		<input type="text" id="ex17" />
+	</div>
+	<br>
+	<h4><strong> 18. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex18_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex18_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex18').value=this.value; getElementById('ex18').show()" style="display:inline" name="score18" />
+		2 <input type="radio" value="2" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		3 <input type="radio" value="3" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		4 <input type="radio" value="4" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		5 <input type="radio" value="5" onclick="getElementById('ex18').value=this.value;" style="display:inline" name="score18" />
+		<input type="text" id="ex18" />
+	</div>
+	<br>
+	<h4><strong> 19. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex19_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex19_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex19').value=this.value; getElementById('ex19').show()" style="display:inline" name="score19" />
+		2 <input type="radio" value="2" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		3 <input type="radio" value="3" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		4 <input type="radio" value="4" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		5 <input type="radio" value="5" onclick="getElementById('ex19').value=this.value;" style="display:inline" name="score19" />
+		<input type="text" id="ex19" />
+	</div>
+	<br>
+	<h4><strong> 20. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex20_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex20_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex20').value=this.value; getElementById('ex20').show()" style="display:inline" name="score20" />
+		2 <input type="radio" value="2" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		3 <input type="radio" value="3" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		4 <input type="radio" value="4" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		5 <input type="radio" value="5" onclick="getElementById('ex20').value=this.value;" style="display:inline" name="score20" />
+		<input type="text" id="ex20" />
+	</div>
+	<br>
+	<h4><strong> 21. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex21_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex21_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex21').value=this.value; getElementById('ex21').show()" style="display:inline" name="score21" />
+		2 <input type="radio" value="2" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		3 <input type="radio" value="3" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		4 <input type="radio" value="4" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		5 <input type="radio" value="5" onclick="getElementById('ex21').value=this.value;" style="display:inline" name="score21" />
+		<input type="text" id="ex21" />
+	</div>
+	<br>
+	<h4><strong> 22. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex22_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex22_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex22').value=this.value; getElementById('ex22').show()" style="display:inline" name="score22" />
+		2 <input type="radio" value="2" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		3 <input type="radio" value="3" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		4 <input type="radio" value="4" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		5 <input type="radio" value="5" onclick="getElementById('ex22').value=this.value;" style="display:inline" name="score22" />
+		<input type="text" id="ex22" />
+	</div>
+	<br>
+	<h4><strong> 23. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex23_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex23_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex23').value=this.value; getElementById('ex23').show()" style="display:inline" name="score23" />
+		2 <input type="radio" value="2" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		3 <input type="radio" value="3" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		4 <input type="radio" value="4" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		5 <input type="radio" value="5" onclick="getElementById('ex23').value=this.value;" style="display:inline" name="score23" />
+		<input type="text" id="ex23" />
+	</div>
+	<br>
+	<h4><strong> 24. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex24_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex24_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex24').value=this.value; getElementById('ex24').show()" style="display:inline" name="score24" />
+		2 <input type="radio" value="2" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		3 <input type="radio" value="3" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		4 <input type="radio" value="4" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		5 <input type="radio" value="5" onclick="getElementById('ex24').value=this.value;" style="display:inline" name="score24" />
+		<input type="text" id="ex24" />
+	</div>
+	<br>
+	<h4><strong> 25. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex25_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex25_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex25').value=this.value; getElementById('ex25').show()" style="display:inline" name="score25" />
+		2 <input type="radio" value="2" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		3 <input type="radio" value="3" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		4 <input type="radio" value="4" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		5 <input type="radio" value="5" onclick="getElementById('ex25').value=this.value;" style="display:inline" name="score25" />
+		<input type="text" id="ex25" />
+	</div>
+	<br>
+	<h4><strong> 26. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex26_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex26_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex26').value=this.value; getElementById('ex26').show()" style="display:inline" name="score26" />
+		2 <input type="radio" value="2" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		3 <input type="radio" value="3" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		4 <input type="radio" value="4" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		5 <input type="radio" value="5" onclick="getElementById('ex26').value=this.value;" style="display:inline" name="score26" />
+		<input type="text" id="ex26" />
+	</div>
+	<br>
+	<h4><strong> 27. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex27_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex27_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex27').value=this.value; getElementById('ex27').show()" style="display:inline" name="score27" />
+		2 <input type="radio" value="2" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		3 <input type="radio" value="3" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		4 <input type="radio" value="4" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		5 <input type="radio" value="5" onclick="getElementById('ex27').value=this.value;" style="display:inline" name="score27" />
+		<input type="text" id="ex27" />
+	</div>
+	<br>
+	<h4><strong> 28. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex28_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex28_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex28').value=this.value; getElementById('ex28').show()" style="display:inline" name="score28" />
+		2 <input type="radio" value="2" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		3 <input type="radio" value="3" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		4 <input type="radio" value="4" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		5 <input type="radio" value="5" onclick="getElementById('ex28').value=this.value;" style="display:inline" name="score28" />
+		<input type="text" id="ex28" />
+	</div>
+	<br>
+	<h4><strong> 29. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex29_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex29_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex29').value=this.value; getElementById('ex29').show()" style="display:inline" name="score29" />
+		2 <input type="radio" value="2" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		3 <input type="radio" value="3" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		4 <input type="radio" value="4" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		5 <input type="radio" value="5" onclick="getElementById('ex29').value=this.value;" style="display:inline" name="score29" />
+		<input type="text" id="ex29" />
+	</div>
+	<br>
+	<h4><strong> 30. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex30_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex30_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex30').value=this.value; getElementById('ex30').show()" style="display:inline" name="score30" />
+		2 <input type="radio" value="2" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		3 <input type="radio" value="3" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		4 <input type="radio" value="4" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		5 <input type="radio" value="5" onclick="getElementById('ex30').value=this.value;" style="display:inline" name="score30" />
+		<input type="text" id="ex30" />
+	</div>
+	<br>
+	<h4><strong> 31. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex31_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex31_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex31').value=this.value; getElementById('ex31').show()" style="display:inline" name="score31" />
+		2 <input type="radio" value="2" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		3 <input type="radio" value="3" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		4 <input type="radio" value="4" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		5 <input type="radio" value="5" onclick="getElementById('ex31').value=this.value;" style="display:inline" name="score31" />
+		<input type="text" id="ex31" />
+	</div>
+	<br>
+	<h4><strong> 32. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex32_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex32_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex32').value=this.value; getElementById('ex32').show()" style="display:inline" name="score32" />
+		2 <input type="radio" value="2" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		3 <input type="radio" value="3" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		4 <input type="radio" value="4" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		5 <input type="radio" value="5" onclick="getElementById('ex32').value=this.value;" style="display:inline" name="score32" />
+		<input type="text" id="ex32" />
+	</div>
+	<br>
+	<h4><strong> 33. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex33_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex33_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex33').value=this.value; getElementById('ex33').show()" style="display:inline" name="score33" />
+		2 <input type="radio" value="2" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		3 <input type="radio" value="3" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		4 <input type="radio" value="4" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		5 <input type="radio" value="5" onclick="getElementById('ex33').value=this.value;" style="display:inline" name="score33" />
+		<input type="text" id="ex33" />
+	</div>
+	<br>
+	<h4><strong> 34. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex34_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex34_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex34').value=this.value; getElementById('ex34').show()" style="display:inline" name="score34" />
+		2 <input type="radio" value="2" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		3 <input type="radio" value="3" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		4 <input type="radio" value="4" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		5 <input type="radio" value="5" onclick="getElementById('ex34').value=this.value;" style="display:inline" name="score34" />
+		<input type="text" id="ex34" />
+	</div>
+	<br>
+	<h4><strong> 35. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex35_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex35_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex35').value=this.value; getElementById('ex35').show()" style="display:inline" name="score35" />
+		2 <input type="radio" value="2" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		3 <input type="radio" value="3" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		4 <input type="radio" value="4" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		5 <input type="radio" value="5" onclick="getElementById('ex35').value=this.value;" style="display:inline" name="score35" />
+		<input type="text" id="ex35" />
+	</div>
+	<br>
+	<h4><strong> 36. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex36_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex36_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex36').value=this.value; getElementById('ex36').show()" style="display:inline" name="score36" />
+		2 <input type="radio" value="2" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		3 <input type="radio" value="3" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		4 <input type="radio" value="4" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		5 <input type="radio" value="5" onclick="getElementById('ex36').value=this.value;" style="display:inline" name="score36" />
+		<input type="text" id="ex36" />
+	</div>
+	<br>
+	<h4><strong> 37. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex37_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex37_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex37').value=this.value; getElementById('ex37').show()" style="display:inline" name="score37" />
+		2 <input type="radio" value="2" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		3 <input type="radio" value="3" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		4 <input type="radio" value="4" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		5 <input type="radio" value="5" onclick="getElementById('ex37').value=this.value;" style="display:inline" name="score37" />
+		<input type="text" id="ex37" />
+	</div>
+	<br>
+	<h4><strong> 38. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex38_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex38_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex38').value=this.value; getElementById('ex38').show()" style="display:inline" name="score38" />
+		2 <input type="radio" value="2" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		3 <input type="radio" value="3" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		4 <input type="radio" value="4" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		5 <input type="radio" value="5" onclick="getElementById('ex38').value=this.value;" style="display:inline" name="score38" />
+		<input type="text" id="ex38" />
+	</div>
+	<br>
+	<h4><strong> 39. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex39_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex39_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex39').value=this.value; getElementById('ex39').show()" style="display:inline" name="score39" />
+		2 <input type="radio" value="2" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		3 <input type="radio" value="3" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		4 <input type="radio" value="4" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		5 <input type="radio" value="5" onclick="getElementById('ex39').value=this.value;" style="display:inline" name="score39" />
+		<input type="text" id="ex39" />
+	</div>
+	<br>
+	<h4><strong> 40. Listen to the sample and select your preference based on the naturalness and quality of the two audio:</h4>
+	<h4> Please focus on comparing the naturalness and quality of the two audio. </h4>
+	<h4> You should not evaluate the samples about linguistic contents or grammar. </h4>
+	<h4>(1: Audio 1 is much better 2: Audio 1 is better 3: Fair 4: Audio 2 is better 5: Audio 2 is much better)</h4>
+	<table border="1">
+	<tr>
+		<th align="center">Audio 1</th>
+		<th align="center">Audio 2</th>
+	</tr>
+	<tr>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex40_syn1.wav">
+		</audio>
+		</td>
+		<td align="center">
+		<audio controls preload="none">
+			<source src="./samples/Test/GE-CN-TTS-LJSpeech/ex40_syn2.wav">
+		</audio>
+		</td>
+	</tr>
+	</table>
+	<div style="display:unblock">
+		1 <input type="radio" value="1" onclick="getElementById('ex40').value=this.value; getElementById('ex40').show()" style="display:inline" name="score40" />
+		2 <input type="radio" value="2" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		3 <input type="radio" value="3" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		4 <input type="radio" value="4" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		5 <input type="radio" value="5" onclick="getElementById('ex40').value=this.value;" style="display:inline" name="score40" />
+		<input type="text" id="ex40" />
+	</div>
+	<br>
+
+ 
+    <br>
+    <input id="download_btn" type="submit" class="btn" style="overflow:hidden;padding: 5px 5px; border-radius: 3px;font-size: 10.5pt; width:250px ; background-color: #121111; font-weight: bold;" onClick="download();" value="Download"/ >
+
+  </form> 
+  
+  </body>
+  
+
+</div>
