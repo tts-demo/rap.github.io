@@ -34,10 +34,10 @@ layout: default
 				<tbody>
 				  <tr>
   					<th>GT</th>
+					<th>FastSpeech2</th>
 					<th>Proposed</th>
-					<th>Comospeech</th>
-  					<th>FastSpeech2</th>
   					<th>Grad-TTS</th>
+					<th>Comospeech</th>
 				        <th>Matcha-TTS</th>
 					<th>VoiceFlow</th>
 
@@ -49,18 +49,24 @@ layout: default
 						</audio>
 					</td>
   					<td>
-						<audio controls="" preload="none"> NFE - 2
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td>
-						<audio controls="" preload="none"> NFE - 2
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td>
 						<audio controls="" preload="none"> NFE - 1
 							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
+						</audio>
+					</td>
+  					<td> NFE - 2
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio> NFE - 10
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio>
+					</td>
+  					<td> NFE - 2
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio> NFE - 10
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
 						</audio>
 					</td>
   					<td> NFE - 2
@@ -101,41 +107,14 @@ layout: default
 				<tbody>
 				  <tr>
   					<th>GT</th>
+					<th>Baseline</th>
 					<th>Proposed</th>
-					<th>Comospeech</th>
-  					<th>FastSpeech2</th>
-  					<th>Grad-TTS</th>
-				        <th>Matcha-TTS</th>
-					<th>VoiceFlow</th>
 
 				  </tr>
   				<tr>
   					<td>
 						<audio controls="" preload="none">
 							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td>
-						<audio controls="" preload="none"> NFE - 2
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td>
-						<audio controls="" preload="none"> NFE - 2
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td>
-						<audio controls="" preload="none"> NFE - 1
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
-						</audio>
-					</td>
-  					<td> NFE - 2
-						<audio controls="" preload="none">
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
-						</audio> NFE - 10
-						<audio controls="" preload="none">
-							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
 						</audio>
 					</td>
   					<td> NFE - 2
@@ -159,21 +138,48 @@ layout: default
   </table>
 
   <br>
-  <h3><strong>3. Additional samples </h3>
+  <h3><strong>3. Additional samples on the LJSpeech dataset </h3>
   <hr>
 
-  <h4><strong>5.1) Unseen emotion scenarios: The following samples are synthesized by DEX-TTS without the model being trained on the emotional category of the reference. </h4>
   <p><b>Text: </b><i>And his heart wagged with joy like a lamb's tail.</i></p>
-  <p><b>Reference Speaker & Emotion: </b><i>0017_Sad</i></p>
   <table>
 				<tbody>
 				  <tr>
-  					<th>Reference</th>
-  					<th>DEX-TTS</th>
+  					<th>GT</th>
+					<th>Baseline</th>
+					<th>Proposed (w/o improved)</th>
+  					<th>Proposed</th>
 				  </tr>
   				<tr>
-  					<td><audio controls="" preload="none"><source src="samples/demo/EXP-TTS-ESD/5.1.1)-Reference.wav"></audio></td>
-  					<td><audio controls="" preload="none"><source src="samples/demo/EXP-TTS-ESD/5.1.1)-DEX-TTS.wav"></audio></td>
+  					<td>
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GT.wav">
+						</audio>
+					</td>
+  					<td> NFE - 2
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio> NFE - 10
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio>
+					</td>
+  					<td> NFE - 2
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio> NFE - 10
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio>
+					</td>
+  					<td> NFE - 2
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio> NFE - 10
+						<audio controls="" preload="none">
+							<source src="samples/demo/GE-TTS-LJSpeech/3.1)-GeDEX-TTS.wav">
+						</audio>
+					</td>
 				  </tr>
 				</tbody>
   </table>
